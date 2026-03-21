@@ -1,0 +1,5 @@
+repositories:
+  - name: terminus-platform
+    remote_url: https://github.com/electricm0nk/terminus-platform.git
+    local_path: TargetProjects/electricm0nk/terminus-platform
+    default_branch: main
