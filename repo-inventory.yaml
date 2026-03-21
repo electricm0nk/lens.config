@@ -1,4 +1,12 @@
 repositories:
+  - name: terminus.infra
+    remote_url: https://github.com/electricm0nk/terminus.infra.git
+    local_path: TargetProjects/terminus/infra/terminus.infra
+    default_branch: main
+  - name: terminus.platform
+    remote_url: https://github.com/electricm0nk/terminus.platform.git
+    local_path: TargetProjects/terminus/platform/terminus.platform
+    default_branch: main
   - name: terminus-platform
     remote_url: https://github.com/electricm0nk/terminus-platform.git
     local_path: TargetProjects/terminus/platform/terminus-platform

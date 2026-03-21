@@ -119,11 +119,25 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ---
 
+### Article 9: Security First
+
+**Rule:** Security is a first-order requirement in every initiative. Secrets must never be stored in source control. All implementations must follow established security best practices by default. Shortcuts that weaken credential handling, access control, encryption, auditability, or other core security controls are prohibited.
+
+**Rationale:** Security failures are high-impact, hard to contain, and often irreversible once exposed. Treating security as optional or deferrable creates systemic risk across every domain, service, and repository in the organization.
+
+**Evidence Required:** Architecture and implementation artifacts must identify secret handling, trust boundaries, credential storage approach, and applicable security controls. Code review must confirm that no secrets are committed and that the implementation follows documented security best-practice patterns appropriate to the technology in use.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
 |------|--------|---------|
 | 2026-03-21T16:00:00Z | Ratified | Initial constitution — 8 articles |
+| 2026-03-21T16:00:00Z | Amended | Added Article 9: Security First |
 
 ---
 
