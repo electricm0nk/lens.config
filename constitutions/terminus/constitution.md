@@ -61,11 +61,25 @@ This domain constitution is strictly additive relative to the org constitution. 
 
 ---
 
+### Article 4: Internal Network Namespace
+
+**Rule:** The canonical internal DNS domain for all terminus homelab infrastructure is `trantor.internal`. All service hostnames, VM names, and internal DNS records within the terminus domain must use this domain suffix. No alternative internal domain suffix (including `.local`, `.lan`, or `.terminus.local`) may be introduced without an explicit constitutional amendment.
+
+**Rationale:** A single, stable internal domain namespace eliminates ambiguity in DNS configuration, cloud-init templates, TLS certificate subject names, and service discovery rules. `.local` is reserved by mDNS (RFC 6762) and causes conflicts; `trantor.internal` uses the formally reserved `.internal` TLD (RFC 9476) and is scoped to the physical host that anchors the homelab.
+
+**Evidence Required:** OpenTofu modules, cloud-init templates, and DNS configuration that provision or reference internal hostnames must use `trantor.internal` as the domain suffix.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
 |------|--------|---------|
 | 2026-03-21T16:00:00Z | Ratified | Initial terminus domain constitution with repository-boundary governance |
+| 2026-03-25T00:00:00Z | Amended | Article 4: establish `trantor.internal` as canonical internal DNS domain |
 
 ---
 
