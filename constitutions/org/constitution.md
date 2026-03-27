@@ -132,12 +132,32 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ---
 
+---
+
+### Article 10: Repository Is the Agent's Source of Truth
+
+**Rule:** Any context that an agent needs to perform initiative work — decisions, rationale, architectural patterns, operating principles, conventions, and domain knowledge — must be committed to the repository. Context that lives only in chat threads, verbal discussions, external documents, or human memory is invisible to agents and therefore does not govern their output. When a decision is made or a pattern is established, it must be encoded in repo-local, versioned artifacts before it can be considered authoritative.
+
+**Corollary — Maps Over Manuals:** Agent-facing knowledge files (such as `AGENTS.md`, `copilot-instructions.md`, or equivalent) must function as navigational maps — short, stable entry points with pointers to deeper sources of truth — not as monolithic instruction manuals. A knowledge file that attempts to encode every rule in a single blob will crowd out task context, become unmaintainable, and rot into inaccuracy. Knowledge must be distributed across appropriately scoped, cross-linked, versioned artifacts.
+
+**Corollary — Knowledge Rot Is a Defect:** Documentation or guidance that no longer reflects real code behavior is a defect, not a cosmetic issue. Stale agent-facing knowledge actively harms output quality by causing agents to operate on false premises. Keeping agent-visible knowledge current is engineering work of the same priority class as keeping code correct.
+
+**Rationale:** Agents can only reason over what is in their context at runtime. Any knowledge not encoded in the repository effectively does not exist to an agent — the same way undocumented decisions are invisible to a new hire who joins months later. Distributing knowledge into structured, repo-local artifacts makes it discoverable, versionable, reviewable, and durable across model upgrades and team changes. This is the foundation that allows agent-assisted work to remain coherent and aligned with human intent over time.
+
+**Evidence Required:** Initiative artifacts and architecture documentation must be committed to the repository. Significant decisions that shape implementation — including rationale for patterns, exceptions, and tradeoffs — must appear in committed documents rather than external sources. Agent-facing knowledge files must use a map-and-pointer structure rather than a single monolithic file.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
 |------|--------|---------|
 | 2026-03-21T16:00:00Z | Ratified | Initial constitution — 8 articles |
 | 2026-03-21T16:00:00Z | Amended | Added Article 9: Security First |
+| 2026-03-27T00:00:00Z | Amended | Added Article 10: Repository Is the Agent's Source of Truth |
 
 ---
 
