@@ -93,6 +93,21 @@ All other terminus-domain repositories follow the default LENS branching and PR 
 
 ---
 
+### Article 6: Base-to-Main Synchronization on Every Merge
+
+**Rule:** When a pull request merges work into the `base` audience branch of any terminus-domain target repository, the same merged content must also be merged into `main` as part of the same lifecycle event. The `main` branch must never lag behind `base`. Synchronization merges into `main` must be non-destructive: the merge must be a standard merge commit that incorporates any divergent `main` content. Force-pushes, rebases onto `main`, and history rewrites that could discard commits already present on `main` are prohibited.
+
+**Rationale:** The `base` audience branch accumulates finalized, reviewed work from all feature and service initiatives. If `main` is not kept current with `base`, future work branched from `main` diverges from the authoritative state, creating increasingly expensive merges, silent behavioral regressions, and ambiguous groundtruth for operators and developers. Synchronizing at each merge event — rather than periodically — prevents divergence from compounding. The non-destructive constraint protects `main` from losing hotfixes, operator commits, or any other commits that legitimately reach `main` outside the initiative cycle.
+
+**Scope:** This article applies to all terminus-domain target repositories that use the LENS initiative branch model (including a `base` audience branch). It does not apply to `terminus.infra` and `terminus.platform`, which are governed by Article 5 of this constitution (direct-to-main commits; no `base` branch separation).
+
+**Evidence Required:** For each PR that merges into a `base` audience branch, a corresponding merge commit or PR targeting `main` must exist and reference the source base merge. The merge to `main` must be a standard merge commit — no force-push or rebase.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
@@ -100,6 +115,7 @@ All other terminus-domain repositories follow the default LENS branching and PR 
 | 2026-03-21T16:00:00Z | Ratified | Initial terminus domain constitution with repository-boundary governance |
 | 2026-03-25T00:00:00Z | Amended | Article 4: establish `trantor.internal` as canonical internal DNS domain |
 | 2026-03-26T00:00:00Z | Amended | Article 5: permit direct-to-main development for terminus.infra and terminus.platform |
+| 2026-03-27T00:00:00Z | Amended | Added Article 6: Base-to-Main Synchronization on Every Merge |
 
 ---
 
