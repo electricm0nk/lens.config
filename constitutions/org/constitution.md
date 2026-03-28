@@ -151,6 +151,23 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ---
 
+### Article 11: Prefer Source-Correction; Always Maintain a Runbook
+
+**Rule:** When an agent is asked to build, fix, or implement any component, it must prefer correcting the authoritative source artifact (code, configuration, template, script) over workarounds, patches, or ad-hoc instructions. When a source correction is not possible — due to external constraints, upstream dependencies, or environment-specific state — the gap must be recorded in a version-controlled markdown file on the current branch before the session ends. In addition, every infrastructure or service component must be covered by a `runbook.md` that documents the component's purpose, its dependencies, and the exact commands to rebuild it from scratch. The runbook must be reviewed and updated at the end of every session that touches the component, even if only to confirm its accuracy.
+
+**Rationale:** The organization runs with heavy agent assistance. An agent that works around a broken source leaves the repository in a state that will confuse all future agents and engineers. An agent that fixes the root cause extends the canonical knowledge baseline. Where root-cause fixes are not possible, recorded gaps are the minimum acceptable residue — undocumented gaps compound silently. Runbooks serve the same principle applied to operational knowledge: a component that cannot be rebuilt from committed documentation is a single-point-of-failure for human and agent alike.
+
+**Evidence Required:**
+- Implementation commits must target source artifacts (templates, scripts, configs) rather than one-off environment patches where possible.
+- When a source fix is not possible, a committed markdown file on the active branch must describe: what the gap is, why a source fix was not made, and what manual steps were taken.
+- A `runbook.md` file must exist for each infrastructure or service component introduced or materially changed by an initiative. It must contain: the component's purpose, its dependencies, and a rebuild-from-scratch command sequence.
+- The runbook must include a `Last Verified` timestamp updated each session.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
@@ -158,6 +175,7 @@ This constitution governs all software initiatives under the electricm0nk organi
 | 2026-03-21T16:00:00Z | Ratified | Initial constitution — 8 articles |
 | 2026-03-21T16:00:00Z | Amended | Added Article 9: Security First |
 | 2026-03-27T00:00:00Z | Amended | Added Article 10: Repository Is the Agent's Source of Truth |
+| 2026-03-28T00:00:00Z | Amended | Added Article 11: Prefer Source-Correction; Always Maintain a Runbook |
 
 ---
 
