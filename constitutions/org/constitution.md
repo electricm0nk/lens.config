@@ -208,6 +208,19 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ---
 
+### Article 14: Epic-Scoped PR Discipline
+
+**Rule:** During dev execution, pull requests are created on a per-epic basis, not per story. All stories within an epic are implemented on a single epic feature branch. One PR is opened when the epic is complete — all stories done and all acceptance criteria passing. Story-level PRs are prohibited.
+
+**Rationale:** Story-level PRs create significant merge overhead and context fragmentation in small, single-operator execution environments. Epic-scoped PRs preserve review quality while reducing ceremony proportionate to team scale. The organizational review unit is the epic. Individual story commits are still made incrementally to the epic branch, preserving traceability and rollback granularity without incurring per-story PR overhead.
+
+**Evidence Required:** During dev execution, each epic has a single feature branch. Stories are committed incrementally to that branch as they reach `done`. The PR is opened only after the final story in the epic passes all acceptance criteria. No PRs are opened mid-epic for individual stories. The `sprint-status.yaml` must confirm all stories in the epic are `done` before the epic PR is created.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
@@ -219,6 +232,7 @@ This constitution governs all software initiatives under the electricm0nk organi
 | 2026-03-28T01:00:00Z | Amended | Article 11: named gap manifest file as `pre-repave-manifest.md`; added cross-reference requirements between runbook.md and pre-repave-manifest.md; added Resolved Gaps retention rule |
 | 2026-03-27T00:00:00Z | Amended | Added Article 12: Agent Entry Point Parity — requires structural alignment between all assistant entry point files; preflight is the enforcement gate |
 | 2026-03-28T02:00:00Z | Amended | Added Article 13: IDE Adapter Installation and Verification — requires `.claude/commands/` (and equivalent) be installed and verified by preflight on every run |
+| 2026-03-28T00:00:00Z | Amended | Added Article 14: Epic-Scoped PR Discipline — PRs created per epic, not per story; all stories committed to single epic branch; PR opened only when epic is complete |
 
 ---
 
