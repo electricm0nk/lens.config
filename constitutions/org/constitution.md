@@ -252,6 +252,38 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ---
 
+### Article 16: Internal Infrastructure Primacy
+
+**Rule:** All initiatives must default to the organization's internally built and operated infrastructure for compute, orchestration, storage, data persistence, networking, secrets management, AI inference, and operational tooling. Externally hosted services, SaaS platforms, and third-party providers are non-default options. Any decision to use an external service or tool in place of an available internal equivalent must be documented as a `.todo` entry in the initiative's `.todo` folder (see Article 17) before that decision is acted upon. The entry must remain open and unresolved until explicitly reviewed and accepted.
+
+**Rationale:** The terminus domain exists to provide a self-hosted infrastructure stack under full operator control. Defaulting to internal infrastructure preserves data sovereignty, reinforces platform investment, and prevents silent accumulation of external dependencies that erode the organization's operational independence. Requiring a `.todo` review entry for each deviation creates a lightweight but durable audit trail without blocking delivery.
+
+**Evidence Required:** Architecture and implementation artifacts must enumerate all infrastructure dependencies and confirm each is sourced from the internal terminus stack where an internal equivalent exists. Where an external service is used, a corresponding `.todo` entry must exist documenting: the external dependency chosen, the internal alternative considered, and the reason for the deviation. The entry must reference this article and must not be marked resolved until it has been reviewed.
+
+**Gate:** informational
+**Status:** active
+
+---
+
+### Article 17: .todo Folder as Workflow Discovery Log
+
+**Rule:** Every domain, service, and feature initiative must maintain a `.todo` folder at its initiative artifact root (`_bmad-output/lens-work/initiatives/{domain}/`, `_bmad-output/lens-work/initiatives/{domain}/{service}/`, or `_bmad-output/lens-work/initiatives/{domain}/{service}/{feature}/` as appropriate). This folder is the designated capture point for unresolved findings discovered during any phase of the lifecycle — including defects, half-formed ideas, enhancement requests, architecture concerns, deferred decisions, and internal infrastructure deviation notices (see Article 16). Each entry is a separate `.md` file named with a short slug and creation date (e.g., `2026-04-03-vault-auth-edge-case.md`). Entries accumulate throughout the lifecycle and must be reviewed at each phase gate. An initiative may not reach `done` state while any `.todo` entry is marked unreviewed.
+
+**Entry Format:** Each `.todo` entry must contain at minimum:
+- **Label:** one of `defect`, `idea`, `enhancement`, `architecture-concern`, `deferred-decision`, or `infra-deviation`
+- **Date:** ISO 8601 date the entry was added
+- **Description:** one or more sentences describing the finding
+- **Status:** `open` or `reviewed` (with reviewer note when reviewed)
+
+**Rationale:** Discoveries happen throughout development — not only during planning. A universal, low-friction capture point ensures observations are recorded at the moment they arise rather than being lost in chat threads or forgotten between sessions. By giving every initiative level a `.todo` folder and anchoring review to phase gates, the organization prevents deferred thoughts from silently dropping out of the workflow.
+
+**Evidence Required:** The `.todo/` folder must be present within the initiative artifact path for any initiative in active development. Phase gate artifacts must include a `.todo` review summary confirming all entries have been assessed and their statuses updated. Entries added by agents during implementation must cite the source story or task.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
@@ -267,6 +299,8 @@ This constitution governs all software initiatives under the electricm0nk organi
 | 2026-03-28T00:00:00Z | Amended | Added Article 14: Epic-Scoped PR Discipline — PRs created per epic, not per story; all stories committed to single epic branch; PR opened only when epic is complete |
 | 2026-03-28T00:00:00Z | Reverted | Removed Article 14: Epic-Scoped PR Discipline — superseded by terminus domain constitution Article 5 (2026-03-26), which already authorizes direct-to-main development for terminus.infra and terminus.platform; Article 14 was added in error and contradicted existing domain governance |
 | 2026-04-03T00:00:00Z | Amended | Added Article 15: AI Safety Primacy — safety/security is first principle for all AI work; default is do not proceed when risk is unknown or unmitigated; exceptions require seven committed artifacts; incomplete exceptions are void; promotion gated while any unapproved or expired exception exists |
+| 2026-04-03T00:00:00Z | Amended | Added Article 16: Internal Infrastructure Primacy — all initiatives default to internally built infrastructure; external service deviations must be documented as open .todo entries before proceeding |
+| 2026-04-03T00:00:00Z | Amended | Added Article 17: .todo Folder as Workflow Discovery Log — every initiative level requires a .todo/ folder for capturing defects, ideas, enhancements, and deferred decisions; reviewed at each phase gate; initiative cannot reach done with unreviewed entries |
 
 ---
 
