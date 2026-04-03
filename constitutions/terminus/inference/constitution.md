@@ -100,11 +100,25 @@ This service constitution is strictly additive relative to the org and terminus 
 
 ---
 
+### Article 7: Go as Preferred Implementation Language
+
+**Rule:** Go is the preferred implementation language for services within the terminus-inference service boundary. New services, gateways, and components introduced to this service should default to Go unless a compelling, documented justification exists for an alternative. Justifications must be recorded in the initiative's architecture documentation before implementation begins. This rule does not apply retroactively to existing services implemented in other languages.
+
+**Rationale:** Go's concurrency model (goroutines), single-binary deployment artifact, and `net/http` standard library make it structurally well-suited for API gateway and inference proxy workloads. Go is also gaining mainstream adoption within the broader organization, reducing the long-term cost of code review, onboarding, and maintenance. Standardizing on Go at the service boundary avoids a heterogeneous language mix that increases cognitive overhead for operators and developers working across the inference topology.
+
+**Evidence Required:** Architecture documentation for any new terminus-inference component implemented in a language other than Go must include a section titled "Language Justification" explaining why Go was not selected and what properties of the alternative language are required for the use case.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
 |------|--------|---------|
 | 2026-04-03T00:00:00Z | Ratified | Initial terminus-inference service constitution — 6 articles covering route profiles, gateway contract gate, batch safety, guardrails, controlled rollout/rollback, and no-implicit-fallback on batch routes |
+| 2026-04-03T13:36:41Z | Amended | Added Article 7: Go as preferred implementation language for terminus-inference services |
 
 ---
 
