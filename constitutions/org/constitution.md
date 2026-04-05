@@ -284,6 +284,23 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ---
 
+### Article 18: Service Delivery Includes Deployment
+
+**Rule:** A service initiative is not complete until the service can receive traffic in its target environment. Deployment artifacts — including cluster manifests, ingress configuration, secrets provisioning, and any required infrastructure wiring — must be scoped into the same sprint as the service functionality they support. Deferring deployment to a follow-on initiative or a separate infrastructure ticket is prohibited unless an explicit, documented exception is approved and committed to the initiative artifacts before the service sprint closes.
+
+**Rationale:** A service that is "done" but not reachable provides no value and creates a false sense of delivery completeness. The gap between a tested, merged service and a live, routable endpoint is not a trivial handoff — it requires coordination, environment-specific configuration, and validation that can surface integration issues invisible to unit and contract tests. When deployment is treated as someone else's problem, those issues are discovered later, at higher cost, and often by the wrong person. The only honest definition of "done" for a service is: traffic can reach it.
+
+**Scope:** Applies to all service and feature initiatives that introduce or modify a network-reachable service endpoint. Infrastructure-only initiatives (e.g., cluster provisioning, secret store setup) are exempt from this article. Existing services receiving only internal refactoring changes that do not alter their deployment model are also exempt.
+
+**Exception Standard:** If deployment cannot be completed in the same sprint — due to an unresolved infrastructure dependency, environment readiness gate, or operator decision — a `.todo` entry (see Article 17) must be filed before the sprint closes specifying: the missing deployment component, the dependency blocking it, the owner, and a target date. The entry must remain open until deployment is confirmed.
+
+**Evidence Required:** Initiative sprint artifacts must include at least one story or task scoped to deployment completeness for each service endpoint introduced. The story must cover: cluster/namespace manifests, ingress or route configuration, secrets provisioning runbook entries, and a smoke-test acceptance criterion confirming the endpoint is reachable in the target environment. Where a deployment exception has been filed, the `.todo` entry must be present and unresolved at sprint close.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
@@ -298,6 +315,7 @@ This constitution governs all software initiatives under the electricm0nk organi
 | 2026-03-28T02:00:00Z | Amended | Added Article 13: IDE Adapter Installation and Verification — requires `.claude/commands/` (and equivalent) be installed and verified by preflight on every run |
 | 2026-03-28T00:00:00Z | Amended | Added Article 14: Epic-Scoped PR Discipline — PRs created per epic, not per story; all stories committed to single epic branch; PR opened only when epic is complete |
 | 2026-03-28T00:00:00Z | Reverted | Removed Article 14: Epic-Scoped PR Discipline — superseded by terminus domain constitution Article 5 (2026-03-26), which already authorizes direct-to-main development for terminus.infra and terminus.platform; Article 14 was added in error and contradicted existing domain governance |
+| 2026-04-04T00:00:00Z | Amended | Added Article 18: Service Delivery Includes Deployment — a service initiative is not complete until the service can receive traffic; deployment artifacts must be scoped in the same sprint as the service functionality |
 | 2026-04-03T00:00:00Z | Amended | Added Article 15: AI Safety Primacy — safety/security is first principle for all AI work; default is do not proceed when risk is unknown or unmitigated; exceptions require seven committed artifacts; incomplete exceptions are void; promotion gated while any unapproved or expired exception exists |
 | 2026-04-03T00:00:00Z | Amended | Added Article 16: Internal Infrastructure Primacy — all initiatives default to internally built infrastructure; external service deviations must be documented as open .todo entries before proceeding |
 | 2026-04-03T00:00:00Z | Amended | Added Article 17: .todo Folder as Workflow Discovery Log — every initiative level requires a .todo/ folder for capturing defects, ideas, enhancements, and deferred decisions; reviewed at each phase gate; initiative cannot reach done with unreviewed entries |

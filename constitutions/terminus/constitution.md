@@ -173,6 +173,30 @@ All other terminus-domain repositories follow the default LENS branching and PR 
 
 ---
 
+### Article 12: k3s Deployment Completeness
+
+**Rule:** For any service initiative within the terminus domain that introduces a network-reachable service endpoint, the following deployment artifacts must be committed and applied to the k3s cluster before the initiative is considered complete:
+
+1. **ArgoCD `Application` manifest** — committed to `terminus.infra` under `argocd/apps/`, pointing at the service's Helm chart in its source repository. The application must target the correct destination namespace and sync policy.
+2. **Namespace manifest** — a `Namespace` resource committed to `terminus.infra` under `argocd/namespaces/` or inline in the app-of-apps kustomization, ensuring the namespace exists before the application syncs.
+3. **Traefik `IngressRoute`** — an `IngressRoute` resource with a `*.trantor.internal` hostname (Article 4 of this constitution), committed to `terminus.infra` or bundled in the service's Helm chart under an `ingressRoute` toggle.
+4. **`cert-manager` `Certificate`** — a `Certificate` resource targeting the same `*.trantor.internal` hostname, referencing the cluster `ClusterIssuer`, committed alongside the `IngressRoute`.
+5. **GHCR `imagePullSecret` documented** — if the service image is hosted on a private container registry, the `imagePullSecret` name and its provisioning procedure (manual `kubectl create secret docker-registry` or External Secrets operator path) must be documented in the service's `runbook.md` before the sprint closes.
+6. **Smoke-test acceptance criterion** — at least one story in the deployment sprint must include an AC of the form: `GET https://{service}.trantor.internal/{healthz-path}` returns `200 OK` from within the cluster network.
+
+**Rationale:** This article is the terminus-domain implementation of org Article 18 (Service Delivery Includes Deployment). The k3s cluster uses ArgoCD for GitOps delivery, Traefik as the ingress controller, and cert-manager for TLS. Without these six artifacts, a service merged to `main` is unreachable. The explicit artifact checklist removes ambiguity about what "deployed" means in this environment and prevents the gateway-style gap where a complete, tested service sits unrouted for an indefinite period.
+
+**Scope:** Applies to all terminus-domain service and feature initiatives deploying to the k3s cluster. Does not apply to initiatives that are exclusively infra-substrate changes (cluster provisioning, Vault configuration, DNS setup) with no new service endpoint.
+
+**Exception:** If any of the six artifacts cannot be completed in the same sprint, the exception mechanism in org Article 18 applies: a `.todo` entry must be filed before sprint close identifying the missing artifact, the dependency, the owner, and a target date.
+
+**Evidence Required:** Sprint artifacts must include stories covering each of the six items above. Each story's acceptance criteria must reference the specific artifact being created. The `runbook.md` for the service must include a section titled "Deployment Checklist" enumerating all six items with confirmation status.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
@@ -182,6 +206,7 @@ All other terminus-domain repositories follow the default LENS branching and PR 
 | 2026-03-26T00:00:00Z | Amended | Article 5: permit direct-to-main development for terminus.infra and terminus.platform |
 | 2026-03-27T00:00:00Z | Amended | Added Article 6: Base-to-Main Synchronization on Every Merge |
 | 2026-04-03T00:00:00Z | Amended | Added Articles 7–11: AI governance for the terminus domain — local-first data sovereignty, AI component promotion gate, gateway contract stability, telemetry/audit baseline, and AI infrastructure separation |
+| 2026-04-04T00:00:00Z | Amended | Added Article 12: k3s Deployment Completeness — terminus-domain implementation of org Article 18; mandates ArgoCD Application, Namespace, IngressRoute, Certificate, imagePullSecret runbook entry, and smoke-test AC before a service initiative is complete |
 
 ---
 
