@@ -338,6 +338,19 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ---
 
+### Article 20: Go Is the Default Runtime for Platform Services and Temporal Workers
+
+**Rule:** Go is the default runtime for all platform services and Temporal workers. Any initiative that introduces a new platform service or Temporal worker using a different runtime must include explicit documented justification in its architecture artifacts, and that justification must be approved before the techplan phase gate is passed.
+
+**Rationale:** Runtime consistency reduces operational overhead, lowers cognitive burden for contributors moving between services, and ensures a uniform set of tooling, observability, and build practices across the platform. Exceptions fragment the platform without proportionate benefit and must therefore be explicitly justified — not defaulted to.
+
+**Evidence Required:** Architecture documentation for any non-Go platform service or Temporal worker must contain a language decision record identifying the chosen runtime, the rationale for the deviation, and the approver. Initiatives using Go require no additional evidence for this rule.
+
+**Gate:** informational
+**Status:** active
+
+---
+
 ## Ratification Record
 
 | Date | Action | Summary |
