@@ -267,17 +267,23 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ### Article 17: .todo Folder as Workflow Discovery Log
 
-**Rule:** Every domain, service, and feature initiative must maintain a `.todo` folder at its initiative artifact root (`_bmad-output/lens-work/initiatives/{domain}/`, `_bmad-output/lens-work/initiatives/{domain}/{service}/`, or `_bmad-output/lens-work/initiatives/{domain}/{service}/{feature}/` as appropriate). This folder is the designated capture point for unresolved findings discovered during any phase of the lifecycle — including defects, half-formed ideas, enhancement requests, architecture concerns, deferred decisions, and internal infrastructure deviation notices (see Article 16). Each entry is a separate `.md` file named with a short slug and creation date (e.g., `2026-04-03-vault-auth-edge-case.md`). Entries accumulate throughout the lifecycle and must be reviewed at each phase gate. An initiative may not reach `done` state while any `.todo` entry is marked unreviewed.
+**Rule:** Every domain must maintain a single `.todo` folder at its domain documentation root (`docs/{domain}/.todo/`). All services and features within that domain write to this same domain-level `.todo` folder. This folder is the designated capture point for unresolved findings discovered during any phase of the lifecycle — including defects, half-formed ideas, enhancement requests, architecture concerns, deferred decisions, and internal infrastructure deviation notices (see Article 16). Each entry is a separate `.md` file named with a short slug and creation date (e.g., `2026-04-03-vault-auth-edge-case.md`). Entries accumulate throughout the lifecycle and must be reviewed at each phase gate. A domain may not reach `done` state while any `.todo` entry is marked unreviewed. When submitting a `.todo` entry, the source initiative (service, feature, or workflow) must be identified in the entry's metadata.
+
+**Entry Lifecycle:** 
+- **open:** Entry is newly recorded and awaiting review or work.
+- **reviewed:** Entry has been assessed and triaged but remains unresolved.
+- **addressed:** Entry has been resolved, acted upon, or deferred to a formal initiative. Once addressed, the entry file must be deleted from the `.todo` folder; addressed entries do not persist in the active discovery log.
 
 **Entry Format:** Each `.todo` entry must contain at minimum:
 - **Label:** one of `defect`, `idea`, `enhancement`, `architecture-concern`, `deferred-decision`, or `infra-deviation`
 - **Date:** ISO 8601 date the entry was added
+- **Source Initiative:** the service or feature from which the finding originated
 - **Description:** one or more sentences describing the finding
-- **Status:** `open` or `reviewed` (with reviewer note when reviewed)
+- **Status:** `open` or `reviewed` (with reviewer note when reviewed). Addressed entries are removed.
 
-**Rationale:** Discoveries happen throughout development — not only during planning. A universal, low-friction capture point ensures observations are recorded at the moment they arise rather than being lost in chat threads or forgotten between sessions. By giving every initiative level a `.todo` folder and anchoring review to phase gates, the organization prevents deferred thoughts from silently dropping out of the workflow.
+**Rationale:** Discoveries happen throughout development — not only during planning. A universal, low-friction capture point at the domain level ensures observations are recorded at the moment they arise rather than being lost in chat threads or forgotten between sessions. Centralizing the `.todo` folder at the domain documentation level prevents duplication of review work across service and feature initiatives while maintaining traceability to the source of each finding. By anchoring review to phase gates and removing addressed entries, the organization prevents deferred thoughts from silently dropping out of the workflow while keeping the active `.todo` log lean and actionable.
 
-**Evidence Required:** The `.todo/` folder must be present within the initiative artifact path for any initiative in active development. Phase gate artifacts must include a `.todo` review summary confirming all entries have been assessed and their statuses updated. Entries added by agents during implementation must cite the source story or task.
+**Evidence Required:** A single `.todo/` folder must be present at the domain documentation root (`docs/{domain}/.todo/`) for any domain in active development. Phase gate artifacts must include a `.todo` review summary confirming all entries relevant to the phase have been assessed and their statuses updated. Entries that have been addressed must have their files removed from the `.todo` folder. Entries added by agents during implementation must cite the source service, feature, or story and task.
 
 **Gate:** informational
 **Status:** active
@@ -370,6 +376,7 @@ This constitution governs all software initiatives under the electricm0nk organi
 | 2026-04-03T00:00:00Z | Amended | Added Article 16: Internal Infrastructure Primacy — all initiatives default to internally built infrastructure; external service deviations must be documented as open .todo entries before proceeding |
 | 2026-04-03T00:00:00Z | Amended | Added Article 17: .todo Folder as Workflow Discovery Log — every initiative level requires a .todo/ folder for capturing defects, ideas, enhancements, and deferred decisions; reviewed at each phase gate; initiative cannot reach done with unreviewed entries |
 | 2026-04-04T00:00:00Z | Amended | Added Article 19: Semaphore UI — Imperative Job Runner in the Terminus Platform — establishes Semaphore as the exclusive imperative job runner, defines the reconciliation test for ArgoCD vs Semaphore ownership, enumerates Semaphore's canonical responsibilities and the standard workload deployment sequence, enforces blast-and-repave rule requiring all job definitions and migration files in the repository |
+| 2026-04-10T00:00:00Z | Amended | Added Article 20: Go Is the Default Runtime for Platform Services and Temporal Workers — Go is the default runtime for all platform services and Temporal workers; non-Go deviations require a language decision record approved before the techplan gate |
 
 ---
 
