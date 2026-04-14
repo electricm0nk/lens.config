@@ -31,3 +31,12 @@ repositories:
 - name: terminus-inference-gateway
   remote_url: https://github.com/electricm0nk/terminus-inference-gateway.git
   local_path: TargetProjects/terminus/inference/terminus-inference-gateway
+- name: fourdogs-central
+  remote_url: https://github.com/electricm0nk/fourdogs-central.git
+  local_path: TargetProjects/fourdogs/central/fourdogs-central
+- name: fourdogs-central-ui
+  remote_url: https://github.com/electricm0nk/fourdogs-central-ui.git
+  local_path: TargetProjects/fourdogs/central/fourdogs-central-ui
+- name: fourdogs-kaylee-agent
+  remote_url: https://github.com/electricm0nk/fourdogs-kaylee-agent.git
+  local_path: TargetProjects/fourdogs/kaylee-agent/fourdogs-kaylee-agent
