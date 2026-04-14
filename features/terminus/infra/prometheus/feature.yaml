@@ -1,0 +1,34 @@
+name: Prometheus Monitoring
+description: ''
+featureId: prometheus
+domain: terminus
+service: infra
+phase: businessplan
+track: quickplan
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: electrikm0nk
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-04-14T23:11:48Z'
+updated: '2026-04-14T23:11:48Z'
+phase_transitions:
+- phase: businessplan
+  timestamp: '2026-04-14T23:11:48Z'
+  user: electrikm0nk
+docs:
+  path: docs/terminus/infra/prometheus
+  governance_docs_path: features/terminus/infra/prometheus/docs

@@ -527,3 +527,16 @@ features:
   summary: 'Migrated from legacy branch: terminus-portal-portal2'
   stale: false
   migrated_from: terminus-portal-portal2
+- id: prometheus
+  featureId: prometheus
+  domain: terminus
+  service: infra
+  status: businessplan
+  owner: electrikm0nk
+  plan_branch: prometheus-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  updated_at: '2026-04-14T23:11:48Z'
+  summary: ''
