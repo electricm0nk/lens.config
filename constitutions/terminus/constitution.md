@@ -74,17 +74,17 @@ This domain constitution is strictly additive relative to the org constitution. 
 
 ---
 
-### Article 5: Direct-to-Main Development for Infrastructure and Platform Repos
+### Article 5: Native Delivery Flow for Infrastructure and Platform Repos
 
-**Rule:** Implementation work in `terminus.infra` and `terminus.platform` target repositories may be committed directly to `main` without creating initiative, epic, or story feature branches, and without opening pull requests. The LENS `/dev` workflow's default branching and PR pattern (initiative branch → epic branch → story branch with story→epic→initiative PRs) is **overridden** for these two repositories. All implementation commits land on `main` directly.
+**Rule:** Implementation work in `terminus.infra` and `terminus.platform` must follow the native LENS module delivery flow for the active version. Service teams must not introduce custom repository workflow mechanics that diverge from native lifecycle behavior.
 
-**Rationale:** `terminus.infra` and `terminus.platform` are single-operator homelab infrastructure repositories. The full feature-branch and PR review ceremony provides no practical safety benefit in this context — there is no second reviewer, no parallel development stream that risks merge conflict, and no deployment pipeline gated on PR approval. The overhead of maintaining initiative/epic/story branches and merging PR chains is disproportionate to the risk and actively impedes delivery cadence. Planning discipline (LENS lifecycle phases, sprint planning, story definitions) is retained; only the target-repo branching and PR mechanics are relaxed.
+**Rationale:** `terminus.infra` and `terminus.platform` are single-operator homelab infrastructure repositories. Keeping them on the module's native delivery flow preserves consistency across tooling, reduces process overhead, and avoids drift from current lifecycle semantics.
 
 **Scope:** This article applies exclusively to the following target repositories:
 - `terminus.infra` (`TargetProjects/terminus/infra/terminus.infra`)
 - `terminus.platform` (`TargetProjects/terminus/platform/terminus.platform`)
 
-All other terminus-domain repositories follow the default LENS branching and PR model unless a separate constitutional article grants a similar exception.
+All other terminus-domain repositories follow the native LENS delivery flow for their configured track unless a separate constitutional article defines additional governance.
 
 **Evidence Required:** No evidence artifact required. The presence of this article in the effective constitution for an initiative whose target repo is `terminus.infra` or `terminus.platform` is sufficient authorization.
 
@@ -93,15 +93,15 @@ All other terminus-domain repositories follow the default LENS branching and PR 
 
 ---
 
-### Article 6: Base-to-Main Synchronization on Every Merge
+### Article 6: Canonical Mainline Currency
 
-**Rule:** When a pull request merges work into the `base` audience branch of any terminus-domain target repository, the same merged content must also be merged into `main` as part of the same lifecycle event. The `main` branch must never lag behind `base`. Synchronization merges into `main` must be non-destructive: the merge must be a standard merge commit that incorporates any divergent `main` content. Force-pushes, rebases onto `main`, and history rewrites that could discard commits already present on `main` are prohibited.
+**Rule:** For any terminus-domain target repository that uses audience-tier progression, the canonical mainline must always reflect the latest approved delivery state. Synchronization actions must be non-destructive and must preserve previously accepted changes.
 
-**Rationale:** The `base` audience branch accumulates finalized, reviewed work from all feature and service initiatives. If `main` is not kept current with `base`, future work branched from `main` diverges from the authoritative state, creating increasingly expensive merges, silent behavioral regressions, and ambiguous groundtruth for operators and developers. Synchronizing at each merge event — rather than periodically — prevents divergence from compounding. The non-destructive constraint protects `main` from losing hotfixes, operator commits, or any other commits that legitimately reach `main` outside the initiative cycle.
+**Rationale:** When canonical state lags behind approved delivery state, future implementation can diverge from operational truth, creating integration risk and expensive recovery. Keeping canonical state current prevents drift compounding and protects already accepted work.
 
-**Scope:** This article applies to all terminus-domain target repositories that use the LENS initiative branch model (including a `base` audience branch). It does not apply to `terminus.infra` and `terminus.platform`, which are governed by Article 5 of this constitution (direct-to-main commits; no `base` branch separation).
+**Scope:** Applies to all terminus-domain target repositories that use audience-tier progression.
 
-**Evidence Required:** For each PR that merges into a `base` audience branch, a corresponding merge commit or PR targeting `main` must exist and reference the source base merge. The merge to `main` must be a standard merge commit — no force-push or rebase.
+**Evidence Required:** Lifecycle records must show that approved delivery state was propagated to canonical mainline without destructive history operations.
 
 **Gate:** informational
 **Status:** active
@@ -203,8 +203,8 @@ All other terminus-domain repositories follow the default LENS branching and PR 
 |------|--------|---------|
 | 2026-03-21T16:00:00Z | Ratified | Initial terminus domain constitution with repository-boundary governance |
 | 2026-03-25T00:00:00Z | Amended | Article 4: establish `trantor.internal` as canonical internal DNS domain |
-| 2026-03-26T00:00:00Z | Amended | Article 5: permit direct-to-main development for terminus.infra and terminus.platform |
-| 2026-03-27T00:00:00Z | Amended | Added Article 6: Base-to-Main Synchronization on Every Merge |
+| 2026-03-26T00:00:00Z | Amended | Article 5: require native LENS delivery flow for terminus.infra and terminus.platform |
+| 2026-03-27T00:00:00Z | Amended | Added Article 6: Canonical Mainline Currency |
 | 2026-04-03T00:00:00Z | Amended | Added Articles 7–11: AI governance for the terminus domain — local-first data sovereignty, AI component promotion gate, gateway contract stability, telemetry/audit baseline, and AI infrastructure separation |
 | 2026-04-04T00:00:00Z | Amended | Added Article 12: k3s Deployment Completeness — terminus-domain implementation of org Article 18; mandates ArgoCD Application, Namespace, IngressRoute, Certificate, imagePullSecret runbook entry, and smoke-test AC before a service initiative is complete |
 

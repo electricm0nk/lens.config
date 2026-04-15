@@ -67,13 +67,13 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ---
 
-### Article 5: Git Discipline
+### Article 5: Lifecycle Evidence Discipline
 
-**Rule:** All initiative work occurs on named initiative branches. Direct commits to `main` are prohibited. The only permitted path to `main` is a reviewed and approved pull request.
+**Rule:** All initiative work must leave an auditable lifecycle record in committed artifacts. Phase completion and promotion outcomes must be captured through the native LENS state model and governance outputs.
 
-**Rationale:** Maintains traceability, review discipline, and rollback capability for all production changes.
+**Rationale:** Maintains traceability, review discipline, and rollback capability without prescribing repository workflow mechanics.
 
-**Evidence Required:** PR-based merge is the only path to `main`; branch protection rules enforce this.
+**Evidence Required:** Initiative artifacts, gate outputs, and state transitions are committed and attributable to a specific lifecycle event.
 
 **Gate:** informational
 **Status:** active
@@ -153,13 +153,13 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ### Article 11: Prefer Source-Correction; Always Maintain a Runbook
 
-**Rule:** When an agent is asked to build, fix, or implement any component, it must prefer correcting the authoritative source artifact (code, configuration, template, script) over workarounds, patches, or ad-hoc instructions. When a source correction is not possible — due to external constraints, upstream dependencies, or environment-specific state — the gap must be recorded in a `pre-repave-manifest.md` file committed to the active branch before the session ends. In addition, every infrastructure or service component must be covered by a `runbook.md` that documents the component's purpose, its dependencies, and the exact commands to rebuild it from scratch. The runbook must be reviewed and updated at the end of every session that touches the component, even if only to confirm its accuracy.
+**Rule:** When an agent is asked to build, fix, or implement any component, it must prefer correcting the authoritative source artifact (code, configuration, template, script) over workarounds, patches, or ad-hoc instructions. When a source correction is not possible — due to external constraints, upstream dependencies, or environment-specific state — the gap must be recorded in a `pre-repave-manifest.md` file committed during the active initiative session before the session ends. In addition, every infrastructure or service component must be covered by a `runbook.md` that documents the component's purpose, its dependencies, and the exact commands to rebuild it from scratch. The runbook must be reviewed and updated at the end of every session that touches the component, even if only to confirm its accuracy.
 
 **Rationale:** The organization runs with heavy agent assistance. An agent that works around a broken source leaves the repository in a state that will confuse all future agents and engineers. An agent that fixes the root cause extends the canonical knowledge baseline. Where root-cause fixes are not possible, recorded gaps are the minimum acceptable residue — undocumented gaps compound silently. Runbooks serve the same principle applied to operational knowledge: a component that cannot be rebuilt from committed documentation is a single-point-of-failure for human and agent alike.
 
 **Evidence Required:**
 - Implementation commits must target source artifacts (templates, scripts, configs) rather than one-off environment patches where possible.
-- When a source fix is not possible, a `pre-repave-manifest.md` file committed to the active branch must describe: what each gap is, why a source fix was not made, and what manual steps were taken. Resolved gaps remain in the file under a **Resolved Gaps** section.
+- When a source fix is not possible, a `pre-repave-manifest.md` file committed during the active initiative session must describe: what each gap is, why a source fix was not made, and what manual steps were taken. Resolved gaps remain in the file under a **Resolved Gaps** section.
 - A `runbook.md` file must exist for each infrastructure or service component introduced or materially changed by an initiative. It must contain: the component's purpose, its dependencies, and a rebuild-from-scratch command sequence.
 - The `runbook.md` must include a `Last Verified` timestamp updated each session. It must cross-reference the `pre-repave-manifest.md` when one exists.
 - The `pre-repave-manifest.md` must cross-reference the `runbook.md`.
@@ -173,7 +173,7 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 **Rule:** When multiple AI coding assistants are actively used in this workspace, each must have its session-start entry point file present at the workspace root. These files must maintain structural parity: identical module reference paths, activation sequences, and skill tables. An entry point file present for one assistant but absent for another is a knowledge rot defect. A diverged entry point file is an equal defect.
 
-**Corollary — Preflight Is the Sync Gate:** The release module (`lens.core/`) maintains canonical versions of all workspace-root agent entry point files. Preflight is responsible for syncing these files from the release module to the workspace root on every run. Changes to one entry point file in the release module must include a corresponding update to all peer entry point files in the same commit or PR.
+**Corollary — Preflight Is the Sync Gate:** The release module (`lens.core/`) maintains canonical versions of all workspace-root agent entry point files. Preflight is responsible for syncing these files from the release module to the workspace root on every run. Changes to one entry point file in the release module must include a corresponding update to all peer entry point files in the same change set.
 
 **Rationale:** Different AI coding assistants discover session context from different entry point filenames (`AGENTS.md` for GitHub Copilot/Codex, `CLAUDE.md` for Claude Code, and equivalents for other tools). If each assistant begins a session from a diverged entry point, agents will have inconsistent awareness of project structure, active initiative, constitutional obligations, and available commands. Structural parity ensures every assistant session begins with identical foundational context. This is a direct application of the Knowledge Rot corollary of Article 10: a missing or diverged entry point file is stale documentation that actively harms output quality.
 
@@ -181,7 +181,7 @@ This constitution governs all software initiatives under the electricm0nk organi
 - All actively used assistant entry point files exist at the workspace root.
 - Content comparison between peer files confirms identical module reference paths, activation sequences, and skill references.
 - Preflight sync covers all entry point files from the release module.
-- When a canonical entry point file is updated in the release module, all peer files are updated in the same commit or PR.
+- When a canonical entry point file is updated in the release module, all peer files are updated in the same change set.
 
 **Gate:** informational
 **Status:** active
@@ -208,15 +208,15 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 ---
 
-### Article 14: Automated Phase PR Acceptance (Solo Operator)
+### Article 14: Automated Phase State Advancement (Solo Operator)
 
-**Rule:** For solo-operator organizations, lens-work planning lifecycle phase branch PRs must be automatically created and merged without requiring manual review or intervention. The `auto-merge-phase.sh` script must be used in place of `create-pr.sh` for all phase completion steps.
+**Rule:** For solo-operator organizations, planning lifecycle phases must advance automatically through the native LENS state flow without manual gate-handling ceremony.
 
-**Rationale:** Requiring manual PR review for planning artifact gate merges in a single-contributor environment introduces unnecessary ceremony with no review benefit. The artifact content is collaboratively produced with the agent during the phase workflow; the PR is a state-management record, not a human review gate. Blocking lifecycle advancement on a manual merge step in a solo context defeats the purpose of automation.
+**Rationale:** Manual handling of lifecycle transitions in a single-contributor environment adds friction without improving governance quality. Phase advancement should remain automated while preserving artifact and gate requirements.
 
-**Scope:** Applies exclusively to lens-work planning lifecycle phase branches (`{initiative-root}-{audience}-{phase}` → `{initiative-root}-{audience}`). Does not apply to production code, infrastructure changes, or target project repositories.
+**Scope:** Applies exclusively to lens-work planning lifecycle state progression. Does not alter implementation governance requirements for production code, infrastructure changes, or target project repositories.
 
-**Implementation:** `_bmad/lens-work/scripts/auto-merge-phase.sh`. Uses GitHub API + PAT when available; falls back to local `git merge --no-ff` + push.
+**Implementation:** Lifecycle state advancement is handled by native lens-work automation and governance checks in the active module version.
 
 **Evidence Required:** `_bmad-output/lens-work/personal/profile.yaml` is present (confirms this is a managed workspace, not an ad-hoc environment).
 
@@ -245,7 +245,7 @@ This constitution governs all software initiatives under the electricm0nk organi
 
 **Rationale:** AI systems introduce distinct risk profiles — including opaque failure modes, data leakage surfaces, adversarial input vulnerabilities, and unbounded compute behaviors — that make a default-safe posture essential. The cost of an AI safety failure is typically asymmetric: cheap to prevent early, expensive or irreversible once materialized. Treating safety as optional or deferrable, even under schedule pressure, converts technical risk into organizational risk.
 
-**Evidence Required:** Where an AI safety exception has been invoked, all seven exception artifacts must exist as committed files (or committed sections of existing architecture or decision files) in the active initiative branch. Architecture and design documents for AI components must include explicit safety and data-handling sections. Code review must confirm that no known unmitigated risks were introduced without an approved exception on record.
+**Evidence Required:** Where an AI safety exception has been invoked, all seven exception artifacts must exist as committed files (or committed sections of existing architecture or decision files) in the active initiative artifact set. Architecture and design documents for AI components must include explicit safety and data-handling sections. Code review must confirm that no known unmitigated risks were introduced without an approved exception on record.
 
 **Gate:** informational
 **Status:** active
@@ -362,15 +362,13 @@ This constitution governs all software initiatives under the electricm0nk organi
 | Date | Action | Summary |
 |------|--------|---------|
 | 2026-03-21T16:00:00Z | Ratified | Initial constitution — 8 articles |
-| 2026-04-02T00:00:00Z | Amended | Articles 9–13 added; Article 14 added — Automated Phase PR Acceptance (Solo Operator) |
+| 2026-04-02T00:00:00Z | Amended | Articles 9–13 added; Article 14 added — Automated Phase State Advancement (Solo Operator) |
 | 2026-03-21T16:00:00Z | Amended | Added Article 9: Security First |
 | 2026-03-27T00:00:00Z | Amended | Added Article 10: Repository Is the Agent's Source of Truth |
 | 2026-03-28T00:00:00Z | Amended | Added Article 11: Prefer Source-Correction; Always Maintain a Runbook |
 | 2026-03-28T01:00:00Z | Amended | Article 11: named gap manifest file as `pre-repave-manifest.md`; added cross-reference requirements between runbook.md and pre-repave-manifest.md; added Resolved Gaps retention rule |
 | 2026-03-27T00:00:00Z | Amended | Added Article 12: Agent Entry Point Parity — requires structural alignment between all assistant entry point files; preflight is the enforcement gate |
 | 2026-03-28T02:00:00Z | Amended | Added Article 13: IDE Adapter Installation and Verification — requires `.claude/commands/` (and equivalent) be installed and verified by preflight on every run |
-| 2026-03-28T00:00:00Z | Amended | Added Article 14: Epic-Scoped PR Discipline — PRs created per epic, not per story; all stories committed to single epic branch; PR opened only when epic is complete |
-| 2026-03-28T00:00:00Z | Reverted | Removed Article 14: Epic-Scoped PR Discipline — superseded by terminus domain constitution Article 5 (2026-03-26), which already authorizes direct-to-main development for terminus.infra and terminus.platform; Article 14 was added in error and contradicted existing domain governance |
 | 2026-04-04T00:00:00Z | Amended | Added Article 18: Service Delivery Includes Deployment — a service initiative is not complete until the service can receive traffic; deployment artifacts must be scoped in the same sprint as the service functionality |
 | 2026-04-03T00:00:00Z | Amended | Added Article 15: AI Safety Primacy — safety/security is first principle for all AI work; default is do not proceed when risk is unknown or unmitigated; exceptions require seven committed artifacts; incomplete exceptions are void; promotion gated while any unapproved or expired exception exists |
 | 2026-04-03T00:00:00Z | Amended | Added Article 16: Internal Infrastructure Primacy — all initiatives default to internally built infrastructure; external service deviations must be documented as open .todo entries before proceeding |
