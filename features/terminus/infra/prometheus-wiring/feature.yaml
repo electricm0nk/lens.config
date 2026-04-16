@@ -17,14 +17,32 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- name: terminus.infra
+  url: TargetProjects/terminus/infra/terminus.infra
+  remote_url: TargetProjects/terminus/infra/terminus.infra
+- name: terminus.platform
+  url: TargetProjects/terminus/platform/terminus.platform
+  remote_url: TargetProjects/terminus/platform/terminus.platform
+- name: terminus-inference-gateway
+  url: TargetProjects/terminus/inference/terminus-inference-gateway
+  remote_url: TargetProjects/terminus/inference/terminus-inference-gateway
+- name: terminus-portal
+  url: TargetProjects/terminus/portal/terminus-portal
+  remote_url: TargetProjects/terminus/portal/terminus-portal
+- name: fourdogs-central
+  url: TargetProjects/fourdogs/central/fourdogs-central
+  remote_url: TargetProjects/fourdogs/central/fourdogs-central
+- name: fourdogs-kaylee-agent
+  url: TargetProjects/fourdogs/kaylee-agent/fourdogs-kaylee-agent
+  remote_url: TargetProjects/fourdogs/kaylee-agent/fourdogs-kaylee-agent
 links:
   retrospective: null
   issues: []
   pull_request: null
 priority: medium
 created: '2026-04-16T14:17:12Z'
-updated: '2026-04-16T21:17:43Z'
+updated: '2026-04-16T21:40:38Z'
 phase_transitions:
 - phase: techplan
   timestamp: '2026-04-16T14:17:12Z'
