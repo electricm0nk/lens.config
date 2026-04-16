@@ -3,12 +3,12 @@ description: ''
 featureId: prometheus-wiring
 domain: terminus
 service: infra
-phase: techplan
+phase: finalizeplan-complete
 track: tech-change
 milestones:
   businessplan: null
-  techplan: null
-  finalizeplan: null
+  techplan: '2026-04-16T14:31:57Z'
+  finalizeplan: '2026-04-16T21:17:43Z'
   dev-ready: null
   dev-complete: null
 team:
@@ -24,10 +24,19 @@ links:
   pull_request: null
 priority: medium
 created: '2026-04-16T14:17:12Z'
-updated: '2026-04-16T14:17:12Z'
+updated: '2026-04-16T21:17:43Z'
 phase_transitions:
 - phase: techplan
   timestamp: '2026-04-16T14:17:12Z'
+  user: Todd Hintzmann
+- phase: techplan-complete
+  timestamp: '2026-04-16T14:31:57Z'
+  user: Todd Hintzmann
+- phase: finalizeplan
+  timestamp: '2026-04-16T21:17:43Z'
+  user: Todd Hintzmann
+- phase: finalizeplan-complete
+  timestamp: '2026-04-16T21:17:43Z'
   user: Todd Hintzmann
 docs:
   path: docs/terminus/infra/prometheus-wiring
