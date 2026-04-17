@@ -1,0 +1,63 @@
+# generated: 2026-04-17
+# project: proxmox-vm-boot-order
+# project_key: NOKEY
+# tracking_system: file-system
+# story_location: docs/terminus/infra/proxmox-vm-boot-order/stories
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic 1 (automation-host) must be applied before Epic 2 and 3 — apply-time dependency
+# - All epics can be implemented (code + review) independently; sequencing is apply-time only
+# - Each *-x-plan-and-apply story requires confirming tofu plan shows no replacements before apply
+# - Acceptance test [BOOT-ORDER-ACCEPTANCE] in .todo is the final validation gate
+
+generated: 2026-04-17
+project: proxmox-vm-boot-order
+project_key: NOKEY
+tracking_system: file-system
+story_location: docs/terminus/infra/proxmox-vm-boot-order/stories
+
+development_status:
+  # ── Epic 1: Automation-Host Module ─────────────────────────────────────────
+  epic-1: backlog
+  1-1-create-automation-host-module-with-import-block-and-startup-config: ready-for-dev
+  1-2-add-automation-host-to-tofu-environments-automation-dev: ready-for-dev
+  1-3-tofu-plan-review-and-apply-for-automation-dev: ready-for-dev
+  epic-1-retrospective: optional
+
+  # ── Epic 2: Postgres Startup Configuration ─────────────────────────────────
+  epic-2: backlog
+  2-1-add-startup-config-to-postgres-cluster-module: ready-for-dev
+  2-2-add-startup-config-to-postgres-backup-module: ready-for-dev
+  2-3-tofu-plan-review-and-apply-for-postgres-dev: ready-for-dev
+  epic-2-retrospective: optional
+
+  # ── Epic 3: k3s-Cluster Startup Configuration ──────────────────────────────
+  epic-3: backlog
+  3-1-add-startup-order-locals-and-new-variables-to-k3s-cluster-module: ready-for-dev
+  3-2-add-startup-block-and-on-boot-to-k3s-node-resource: ready-for-dev
+  3-3-update-k3s-dev-environment-with-startup-order-variables: ready-for-dev
+  3-4-tofu-plan-review-and-apply-for-k3s-dev: ready-for-dev
+  epic-3-retrospective: optional
