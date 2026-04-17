@@ -1,0 +1,34 @@
+name: Proxmox VM Boot Order Control
+description: ''
+featureId: proxmox-vm-boot-order
+domain: terminus
+service: infra
+phase: businessplan
+track: quickplan
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-04-17T12:39:42Z'
+updated: '2026-04-17T12:39:42Z'
+phase_transitions:
+- phase: businessplan
+  timestamp: '2026-04-17T12:39:42Z'
+  user: Todd
+docs:
+  path: docs/terminus/infra/proxmox-vm-boot-order
+  governance_docs_path: features/terminus/infra/proxmox-vm-boot-order/docs

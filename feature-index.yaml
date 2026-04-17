@@ -553,3 +553,16 @@ features:
     related: []
   updated_at: '2026-04-16T14:17:12Z'
   summary: ''
+- id: proxmox-vm-boot-order
+  featureId: proxmox-vm-boot-order
+  domain: terminus
+  service: infra
+  status: businessplan
+  owner: Todd
+  plan_branch: proxmox-vm-boot-order-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  updated_at: '2026-04-17T12:39:42Z'
+  summary: ''
