@@ -1,0 +1,9 @@
+kind: service
+id: terminus-portal
+name: portal
+domain: terminus
+service: portal
+status: active
+owner: Todd Hintzmann
+created: '2026-04-19T01:38:11Z'
+updated: '2026-04-19T01:38:11Z'

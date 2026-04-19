@@ -580,3 +580,16 @@ features:
     related: []
   updated_at: '2026-04-17T17:28:01Z'
   summary: ''
+- id: portal3
+  featureId: portal3
+  domain: terminus
+  service: portal
+  status: expressplan
+  owner: Todd Hintzmann
+  plan_branch: portal3-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  updated_at: '2026-04-19T01:38:11Z'
+  summary: ''
