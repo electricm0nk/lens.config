@@ -1,0 +1,34 @@
+name: Transactions
+description: ''
+featureId: transactions
+domain: fourdogs
+service: etailpet-api
+phase: expressplan
+track: express
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-04-20T12:36:14Z'
+updated: '2026-04-20T12:36:14Z'
+phase_transitions:
+- phase: expressplan
+  timestamp: '2026-04-20T12:36:14Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/fourdogs/etailpet-api/transactions
+  governance_docs_path: features/fourdogs/etailpet-api/transactions/docs

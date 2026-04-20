@@ -592,4 +592,18 @@ features:
     blocks: []
     related: []
   updated_at: '2026-04-19T02:18:00Z'
-  summary: 'FinalizePlan complete: execution bundle ready for portal3 service cleanup, domain/service layout, and GitHub Actions visibility.'
+  summary: 'FinalizePlan complete: execution bundle ready for portal3 service cleanup,
+    domain/service layout, and GitHub Actions visibility.'
+- id: transactions
+  featureId: transactions
+  domain: fourdogs
+  service: etailpet-api
+  status: expressplan
+  owner: Todd Hintzmann
+  plan_branch: transactions-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  updated_at: '2026-04-20T12:36:14Z'
+  summary: ''
