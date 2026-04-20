@@ -38,6 +38,7 @@ repositories:
 - name: fourdogs-central-ui
   remote_url: https://github.com/electricm0nk/fourdogs-central-ui.git
   local_path: TargetProjects/fourdogs/central/fourdogs-central-ui
+  default_branch: develop
 - name: fourdogs-kaylee-agent
   remote_url: https://github.com/electricm0nk/fourdogs-kaylee-agent.git
   local_path: TargetProjects/fourdogs/kaylee-agent/fourdogs-kaylee-agent
