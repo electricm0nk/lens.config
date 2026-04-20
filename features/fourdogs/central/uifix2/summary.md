@@ -1,34 +1,25 @@
-# Summary: uifix2
+# Archive Summary: UI Fix 2
 
-**Phase:** dev-ready  
-**Goal:** Resolve four UX defects in the fourdogs/central dev environment that degrade operator trust and workflow accuracy: vendor-mismatched catalog tabs, overly broad priority flags, spurious recommendation badges, and a broken "Load Recommendations" button.  
-**Status:** draft  
-**Updated:** 2026-04-28
+**Feature ID:** uifix2
+**Domain:** fourdogs / central
+**Track:** express
+**Priority:** medium
+**Created:** 
+**Archived:** 2026-04-20T17:23:41Z
 
-## Key Decisions
+## Delivered State
 
-- Fix scope is develop branch only — no schema changes required
-- Defect 4 fix uses risk_score as the primary recommendation qualifier, with suggestedQty as fallback
-- No UI redesign — fixes are minimal surgical code changes
-- ADR-1: Filter buildCatalogTabs to only tabs with ≥1 classified SKU in source catalog
-- ADR-2: Derive prioritySkuIds in FloorWalk.tsx from server query data, not local state
-- ADR-3: Gate INCREASED/KAYLEE/DECREASED labels on kayleeQty !== undefined
-- ADR-4: Qualify applyKayleeRecommendations items by risk_score OR suggestedQty
+This feature has been completed and archived. The feature directory contains
+the complete historical record from inception to delivery.
 
-## Open Questions
+## Archive Contents
 
-- Does the prod ingest pipeline reliably populate items.o in all environments?
-- Should risk_score threshold for auto-recommendation be configurable (default 0)?
-- Does risk_score > 0 produce too many items in some catalogs?
+- `feature.yaml` — feature identity and lifecycle record (phase: complete)
+- `retrospective.md` — retrospective analysis
+- `docs/` — final project documentation
+- `summary.md` — this file
 
-## Artifacts Present
+## Notes
 
-- business-plan.md
-- tech-plan.md
-- sprint-plan.md
-- expressplan-adversarial-review.md
-- finalizeplan-review.md
-- stories/uifix2-1-1.md
-- stories/uifix2-1-2.md
-- stories/uifix2-1-3.md
-- stories/uifix2-1-4.md
+Review the feature directory for the full planning, implementation, and
+retrospective record.
