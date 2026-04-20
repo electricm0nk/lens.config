@@ -2,7 +2,7 @@
 story_id: uifix2-1-1
 feature: uifix2
 title: Fix brand tab filtering in catalogTabs
-status: ready
+status: review
 points: 2
 repo: fourdogs-central-ui
 target_branch: develop

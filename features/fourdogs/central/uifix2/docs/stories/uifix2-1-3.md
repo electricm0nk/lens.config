@@ -2,7 +2,7 @@
 story_id: uifix2-1-3
 feature: uifix2
 title: Gate tier labels on Kaylee recommendation presence
-status: ready
+status: review
 points: 2
 repo: fourdogs-central-ui
 target_branch: develop

@@ -2,7 +2,7 @@
 story_id: uifix2-1-4
 feature: uifix2
 title: Fix Load Recommendations button qualification
-status: ready
+status: review
 points: 2
 repo: fourdogs-central-ui
 target_branch: develop
