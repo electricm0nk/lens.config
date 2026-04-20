@@ -34,6 +34,7 @@ repositories:
 - name: fourdogs-central
   remote_url: https://github.com/electricm0nk/fourdogs-central.git
   local_path: TargetProjects/fourdogs/central/fourdogs-central
+  dev_branch_mode: feature-id
 - name: fourdogs-central-ui
   remote_url: https://github.com/electricm0nk/fourdogs-central-ui.git
   local_path: TargetProjects/fourdogs/central/fourdogs-central-ui
