@@ -1,0 +1,35 @@
+name: Centralized Logging
+description: ''
+featureId: terminus-infra-centralized-logging
+featureSlug: centralized-logging
+domain: terminus
+service: infra
+phase: techplan
+track: tech-change
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: electricm0nk
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-04-22T13:50:20Z'
+updated: '2026-04-22T13:50:20Z'
+phase_transitions:
+- phase: techplan
+  timestamp: '2026-04-22T13:50:20Z'
+  user: electricm0nk
+docs:
+  path: docs/terminus/infra/terminus-infra-centralized-logging
+  governance_docs_path: features/terminus/infra/terminus-infra-centralized-logging/docs

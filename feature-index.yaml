@@ -635,3 +635,17 @@ features:
     gated on kayleeQty. ADR-4: recommendations use riskScore fallback. Express track,
     4 stories ready for /dev.'
   stale: false
+- id: terminus-infra-centralized-logging
+  featureId: terminus-infra-centralized-logging
+  featureSlug: centralized-logging
+  domain: terminus
+  service: infra
+  status: techplan
+  owner: electricm0nk
+  plan_branch: terminus-infra-centralized-logging-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  updated_at: '2026-04-22T13:50:20Z'
+  summary: ''
