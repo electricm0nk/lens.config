@@ -4,12 +4,12 @@ featureId: terminus-infra-centralized-logging
 featureSlug: centralized-logging
 domain: terminus
 service: infra
-phase: finalizeplan
+phase: finalizeplan-complete
 track: tech-change
 milestones:
   businessplan: null
   techplan: '2026-04-22'
-  finalizeplan: null
+  finalizeplan: '2026-04-23'
   dev-ready: null
   dev-complete: null
 team:
@@ -22,16 +22,19 @@ target_repos: []
 links:
   retrospective: null
   issues: []
-  pull_request: null
+  pull_request: https://github.com/electricm0nk/terminus.infra/pull/119
 priority: medium
 created: '2026-04-22T13:50:20Z'
-updated: '2026-04-22T18:00:00Z'
+updated: '2026-04-23T00:00:00Z'
 phase_transitions:
 - phase: techplan
   timestamp: '2026-04-22T13:50:20Z'
   user: electricm0nk
 - phase: finalizeplan
   timestamp: '2026-04-22T18:00:00Z'
+  user: electricm0nk
+- phase: finalizeplan-complete
+  timestamp: '2026-04-23T00:00:00Z'
   user: electricm0nk
 docs:
   path: docs/terminus/infra/terminus-infra-centralized-logging
