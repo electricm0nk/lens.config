@@ -2,121 +2,126 @@ feature: terminus-infra-centralized-logging
 doc_type: sprint-status
 track: tech-change
 generated_at: 2026-04-23T00:00:00Z
-sprint: 1
+updated_at: 2026-04-25T00:00:00Z
+sprint: 3
 
 sprints:
   - id: 1
     name: Sprint 1 — Log Backend Foundation
-    status: not-started
+    status: complete
     stories:
       - id: E1-S1
         title: "Loki S3 Credentials — Vault KV + ExternalSecret (Synology MinIO 10.0.0.2:9000)"
-        status: not-started
+        status: done
         epic: E1
       - id: E1-S2
         title: "Loki Prod Deployment — Helm Values + ArgoCD App"
-        status: not-started
+        status: done
         epic: E1
       - id: E1-S3
         title: "Loki Dev Deployment — Helm Values + ArgoCD App (Upgrade Staging)"
-        status: not-started
+        status: done
         epic: E1
       - id: E3-S1
         title: "ArgoCD ServiceMonitor Fix — Metrics and Namespace Label"
-        status: not-started
+        status: done
         epic: E3
 
   - id: 2
     name: Sprint 2 — Cluster Collection and Grafana Integration
-    status: not-started
+    status: complete
     stories:
       - id: E2-S1
         title: "Alloy DaemonSet Deployment — Helm Values + ArgoCD App"
-        status: not-started
+        status: done
         epic: E2
       - id: E2-S2
         title: "Alloy Log Stream Validation"
-        status: not-started
+        status: done
         epic: E2
       - id: E4-S1
         title: "Loki Grafana Datasource — Sidecar ConfigMaps"
-        status: not-started
+        status: done
         epic: E4
       - id: E4-S2
         title: "Log Dashboards — Platform Log Search Dashboards"
-        status: not-started
+        status: done
         epic: E4
 
   - id: 3
     name: Sprint 3 — Alert Rules and VM Log Shipping
-    status: not-started
+    status: complete
     stories:
       - id: E5-S1
         title: "Loki Ruler Rules — Log-Based Alert Rules in values.yaml"
-        status: not-started
+        status: done
         epic: E5
       - id: E5-S2
         title: "Alertmanager Routing for Loki Alerts — AlertmanagerConfig CRD"
-        status: not-started
+        status: done
         epic: E5
       - id: E6-S1
         title: "Alloy VM Ansible Playbook — Vault and Postgres VM Log Shipping"
-        status: not-started
+        status: done
         epic: E6
       - id: E6-S2
         title: "VM Log Stream Validation and File Permission Hardening"
-        status: not-started
+        status: done
         epic: E6
 
 epics:
   - id: E1
     title: Log Backend Foundation
-    status: not-started
+    status: complete
     sprint: 1
   - id: E2
     title: Cluster Log Collection
-    status: not-started
+    status: complete
     sprint: 2
   - id: E3
     title: ArgoCD Observability Gap Fix
-    status: not-started
+    status: complete
     sprint: 1
   - id: E4
     title: Grafana Integration
-    status: not-started
+    status: complete
     sprint: 2
   - id: E5
     title: Alert Rules and Routing
-    status: not-started
+    status: complete
     sprint: 3
   - id: E6
     title: VM Log Shipping
-    status: not-started
+    status: complete
     sprint: 3
 
 open_items:
   - id: OI-1
-    description: "Alertmanager routing coordination with prometheus-wiring (H5)"
+    description: "Alertmanager routing coordination with prometheus-wiring (H5) — null receiver in place; update when prometheus-wiring ships"
     blocking: false
     sprint: 3
     story: E5-S2
   - id: OI-2
-    description: "containerd 2.0.4 compatibility with Alloy (H6)"
+    description: "containerd 2.0.4-k3s2 verified on all 9 nodes — Alloy v1.x compatible, no action needed"
     blocking: false
     sprint: 2
     story: E2-S1
+    resolved: true
   - id: OI-3
-    description: "Grafana dashboard sidecar reload verification (M6)"
+    description: "Grafana datasource sidecar enabled in values.yaml (sidecar.datasources.enabled: true) — confirmed before E4-S1 implementation"
     blocking: false
     sprint: 2
     story: E4-S1
+    resolved: true
   - id: OI-4
     description: "Verify Synology MinIO accessibility from cluster and loki bucket existence (http://10.0.0.2:9000)"
     blocking: false
     sprint: 1
     story: E1-S1
+    resolved: true
   - id: OI-5
     description: "Create loki-push.trantor.internal Traefik ingress"
     blocking: false
     sprint: 1
     story: E1-S2
+    resolved: true
