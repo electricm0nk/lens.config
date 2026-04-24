@@ -45,5 +45,5 @@ phase_transitions:
   timestamp: '2026-04-23T00:00:00Z'
   user: electricm0nk
 docs:
-  path: docs/terminus/infra/terminus-infra-centralized-logging
+  path: docs/terminus/infra/loki
   governance_docs_path: null
