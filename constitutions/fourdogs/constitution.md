@@ -121,9 +121,8 @@ Minimum expectation:
 - each externally consumed API route is represented in OpenAPI/Swagger
 - request, response, and error envelopes are documented for each route; minimum coverage includes all intentionally returned HTTP status codes for the route and example response bodies for common 4xx/5xx cases
 - route contract changes include OpenAPI/Swagger updates in the same change set
-- Swagger UI must be available and fully rendered in at least one of:
-  - a non-production environment (`dev`, `staging`, or `test`) accessible by the development team, or
-  - an authenticated internal path with an explicit approval record linked from the service OpenAPI source
+- Swagger UI must be protected uniformly across fourdogs services by a shared ingress-level internal authentication mechanism
+- Swagger UI must not be anonymously exposed
 
 Specification requirement:
 
@@ -133,22 +132,26 @@ Specification requirement:
   - `docs/api/<service-name>.openapi.yaml`
 - when multiple OpenAPI files exist, the service README or build configuration must declare the canonical source
 - Swagger UI must render from the maintained OpenAPI source and stay in sync with the same route contract changes
-- when an authenticated internal Swagger UI path is used, the service OpenAPI source must include an approval reference via `x-swagger-ui-path-approval: <https://...>`
+- acceptable Swagger UI auth mechanisms are:
+  - Traefik Basic Auth backed by Vault-managed credentials
+  - an approved internal forward-auth provider
 
 Acceptance criteria:
 
 - versioned APIs must either maintain version-specific OpenAPI documents or a single multi-version spec with version-specific differences documented
 - deprecated routes must be marked deprecated in the OpenAPI definition before code removal
-- Swagger UI usability means the UI loads, renders documented operations, and supports direct request execution for safe routes or for authorized users in the intended environment
-- approval is required only for the authenticated internal-path option; non-production Swagger UI does not require a separate approval record
+- Swagger UI usability means the UI loads, renders documented operations, and supports direct request execution for authorized users in the intended internal environment
+- service-local bespoke Swagger-only auth must not be introduced unless a documented exception is approved under the exception handling section
 
 Audit and ownership:
 
 - service PR reviewer verifies route-to-spec parity for changed endpoints
-- service PR reviewer verifies Swagger UI remains reachable and usable for changed APIs in the intended non-production or internal environment
+- service PR reviewer verifies Swagger UI remains reachable and usable behind the shared ingress-level internal auth mechanism
 - CI must include OpenAPI validation/lint checks (for example Spectral) and fail on missing or invalid spec updates
+- CI must validate ingress or Traefik auth middleware presence for Swagger UI exposure before allowing merge
 - merge to `develop` is blocked when API contract changes are not documented
 - unresolved FD-3 review blocks must be escalated to the domain owner after 5 business days
+- post-deployment smoke testing must confirm Swagger UI requires authentication before the change is considered release-ready
 
 ## Exception Handling
 
