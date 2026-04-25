@@ -668,6 +668,7 @@ features:
   featureSlug: gpu-passthrough
   domain: terminus
   service: infra
+  track: tech-change
   status: techplan
   owner: Todd Hintzmann
   plan_branch: terminus-infra-gpu-passthrough-plan
