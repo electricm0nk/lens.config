@@ -1,0 +1,91 @@
+sprint_number: 1
+feature: terminus-infra-gpu-passthrough
+track: tech-change
+status: planning
+total_points: 38
+goal: "Proxmox VFIO prep → k3s GPU worker provisioning → gateway integration and security hardening"
+
+sprints:
+  - sprint: 1
+    name: "VFIO Prep and GPU Worker Foundation"
+    points: 19
+    status: not-started
+    goal: "Complete Proxmox host VFIO configuration and provision the GPU worker with NVIDIA runtime running"
+    stories:
+      - id: "1.1"
+        title: "Identify GPU host + capture IOMMU evidence"
+        points: 2
+        status: not-started
+        blockers: ["OQ-1: Proxmox node + PCI ID must be confirmed first"]
+      - id: "1.2"
+        title: "Configure VFIO at boot"
+        points: 3
+        status: not-started
+        depends_on: ["1.1"]
+      - id: "2.1"
+        title: "Resolve OQ blocks (node, IP, MAC, bootstrap method)"
+        points: 1
+        status: not-started
+        blockers: []
+      - id: "2.2"
+        title: "Author GPU worker OpenTofu module"
+        points: 5
+        status: not-started
+        depends_on: ["2.1"]
+      - id: "2.3"
+        title: "Provision gpu-worker-01 + bootstrap NVIDIA runtime"
+        points: 8
+        status: not-started
+        depends_on: ["1.2", "2.2"]
+
+  - sprint: 2
+    name: "Ollama Deploy and Gateway Integration"
+    points: 19
+    status: not-started
+    goal: "Deploy Ollama on GPU worker, integrate with inference gateway, and validate routing + security"
+    stories:
+      - id: "2.4"
+        title: "Apply node policy + deploy Ollama"
+        points: 5
+        status: not-started
+        depends_on: ["2.3"]
+      - id: "3.1"
+        title: "Register Ollama provider in gateway routing config"
+        points: 3
+        status: not-started
+        depends_on: ["2.4"]
+      - id: "3.2"
+        title: "Validate healthy-path and fallback-path routing"
+        points: 5
+        status: not-started
+        depends_on: ["3.1"]
+      - id: "3.3"
+        title: "Apply NetworkPolicy to restrict Ollama provider access"
+        points: 3
+        status: not-started
+        depends_on: ["3.1"]
+      - id: "3.4"
+        title: "Establish minimum GPU telemetry"
+        points: 3
+        status: not-started
+        depends_on: ["3.2", "3.3"]
+
+open_questions_gating_sprint_1:
+  - id: OQ-1
+    description: "Proxmox node + PCI ID for RTX 3090 Turbo"
+    gates_stories: ["1.1", "2.1"]
+  - id: OQ-2
+    description: "gpu-worker-01 static IP and FQDN"
+    gates_stories: ["2.1"]
+  - id: OQ-MAC
+    description: "MAC address source of truth"
+    gates_stories: ["2.1"]
+  - id: OQ-BOOTSTRAP
+    description: "Canonical NVIDIA bootstrap method + version pins"
+    gates_stories: ["2.1"]
+
+notes:
+  - "Sprint 1 is blocked until OQ-1 is resolved to start story 1.1"
+  - "Story 2.3 (8 pts) is the heaviest ticket; may require partial sprint carry if bootstrap issues arise"
+  - "Sprint 2 is fully dependent on Sprint 1 completion"
+  - "OQ-3 (concurrency/model memory) should be resolved during Sprint 1 to avoid blocking Sprint 2 Story 3.1"
