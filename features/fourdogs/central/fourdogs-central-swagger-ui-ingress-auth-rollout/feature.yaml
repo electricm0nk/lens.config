@@ -1,0 +1,35 @@
+name: Swagger UI ingress auth rollout
+description: ''
+featureId: fourdogs-central-swagger-ui-ingress-auth-rollout
+featureSlug: swagger-ui-ingress-auth-rollout
+domain: fourdogs
+service: central
+phase: expressplan
+track: express
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-04-25T14:12:00Z'
+updated: '2026-04-25T14:12:00Z'
+phase_transitions:
+- phase: expressplan
+  timestamp: '2026-04-25T14:12:00Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/fourdogs/central/fourdogs-central-swagger-ui-ingress-auth-rollout
+  governance_docs_path: features/fourdogs/central/fourdogs-central-swagger-ui-ingress-auth-rollout/docs

@@ -649,3 +649,17 @@ features:
     related: []
   updated_at: '2026-04-22T13:50:20Z'
   summary: ''
+- id: fourdogs-central-swagger-ui-ingress-auth-rollout
+  featureId: fourdogs-central-swagger-ui-ingress-auth-rollout
+  featureSlug: swagger-ui-ingress-auth-rollout
+  domain: fourdogs
+  service: central
+  status: expressplan
+  owner: Todd Hintzmann
+  plan_branch: fourdogs-central-swagger-ui-ingress-auth-rollout-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  updated_at: '2026-04-25T14:12:00Z'
+  summary: ''
