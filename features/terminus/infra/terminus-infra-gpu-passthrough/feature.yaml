@@ -12,6 +12,7 @@ milestones:
   finalizeplan: '2026-04-26T00:00:00Z'
   dev-ready: '2026-04-25T18:02:34Z'
   dev-complete: '2026-04-26T00:00:00Z'
+  completed: '2026-04-26T00:00:00Z'
 team:
 - username: Todd Hintzmann
   role: lead
@@ -26,7 +27,7 @@ links:
   final_pr: 'https://github.com/electricm0nk/terminus.infra/pull/120'
 priority: medium
 created: '2026-04-25T17:33:02Z'
-updated: '2026-04-26T00:00:00Z'
+updated: '2026-04-26T01:00:00Z'
 phase_transitions:
 - phase: techplan
   timestamp: '2026-04-25T17:33:02Z'
@@ -39,6 +40,9 @@ phase_transitions:
   user: Todd Hintzmann
 - phase: dev-complete
   timestamp: '2026-04-26T00:00:00Z'
+  user: conductor
+- phase: completed
+  timestamp: '2026-04-26T01:00:00Z'
   user: conductor
 docs:
   path: docs/terminus/infra/terminus-infra-gpu-passthrough
