@@ -4,7 +4,7 @@ featureId: terminus-inference-qwen-adapter
 featureSlug: qwen-adapter
 domain: terminus
 service: inference
-phase: dev-complete
+phase: complete
 track: express
 milestones:
   expressplan: null
@@ -49,3 +49,4 @@ phase_transitions:
 docs:
   path: docs/terminus/inference/terminus-inference-qwen-adapter
   governance_docs_path: features/terminus/inference/terminus-inference-qwen-adapter/docs
+completed_at: '2026-04-26T16:17:12Z'

@@ -683,12 +683,12 @@ features:
   featureSlug: qwen-adapter
   domain: terminus
   service: inference
-  status: businessplan
+  status: archived
   owner: Todd Hintzmann
   plan_branch: terminus-inference-qwen-adapter-plan
   related_features:
     depends_on: []
     blocks: []
     related: []
-  updated_at: '2026-04-26T13:46:33Z'
+  updated_at: '2026-04-26T16:17:12Z'
   summary: ''
