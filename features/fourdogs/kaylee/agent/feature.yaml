@@ -17,14 +17,20 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- name: fourdogs-kaylee-agent
+  url: https://github.com/electricm0nk/fourdogs-kaylee-agent.git
+  remote_url: https://github.com/electricm0nk/fourdogs-kaylee-agent.git
+  local_path: TargetProjects/fourdogs/kaylee-agent/fourdogs-kaylee-agent
+  branch: main
+  default_branch: main
 links:
   retrospective: null
   issues: []
   pull_request: null
 priority: medium
 created: '2026-04-14T20:31:24Z'
-updated: '2026-04-14T20:31:24Z'
+updated: '2026-04-26T12:57:52Z'
 phase_transitions:
 - phase: preplan
   timestamp: '2026-04-14T20:31:24Z'

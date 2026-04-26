@@ -17,14 +17,20 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- name: fourdogs-central-ui
+  url: https://github.com/electricm0nk/fourdogs-central-ui.git
+  remote_url: https://github.com/electricm0nk/fourdogs-central-ui.git
+  local_path: TargetProjects/fourdogs/central/fourdogs-central-ui
+  branch: develop
+  default_branch: develop
 links:
   retrospective: null
   issues: []
   pull_request: null
 priority: medium
 created: '2026-04-20T14:25:45Z'
-updated: '2026-04-28T00:00:00Z'
+updated: '2026-04-26T12:58:03Z'
 phase_transitions:
 - phase: expressplan
   timestamp: '2026-04-20T14:25:45Z'

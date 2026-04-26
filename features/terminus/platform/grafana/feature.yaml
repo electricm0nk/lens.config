@@ -17,14 +17,20 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- name: terminus.platform
+  url: https://github.com/electricm0nk/terminus.platform.git
+  remote_url: https://github.com/electricm0nk/terminus.platform.git
+  local_path: TargetProjects/terminus/platform/terminus.platform
+  branch: main
+  default_branch: main
 links:
   retrospective: null
   issues: []
   pull_request: null
 priority: medium
 created: '2026-04-14T20:31:29Z'
-updated: '2026-04-14T20:31:29Z'
+updated: '2026-04-26T12:57:37Z'
 phase_transitions:
 - phase: preplan
   timestamp: '2026-04-14T20:31:29Z'

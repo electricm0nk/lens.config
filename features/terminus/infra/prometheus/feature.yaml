@@ -17,14 +17,21 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- name: terminus.infra
+  url: https://github.com/electricm0nk/terminus.infra.git
+  remote_url: https://github.com/electricm0nk/terminus.infra.git
+  local_path: TargetProjects/terminus/infra/terminus.infra
+  branch: main
+  default_branch: main
+  dev_branch_mode: direct-default
 links:
   retrospective: null
   issues: []
   pull_request: https://github.com/electricm0nk/terminus.infra/pull/97
 priority: medium
 created: '2026-04-14T23:11:48Z'
-updated: '2026-04-16T02:30:00Z'
+updated: '2026-04-26T12:58:03Z'
 phase_transitions:
 - phase: businessplan
   timestamp: '2026-04-14T23:11:48Z'
