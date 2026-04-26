@@ -4,7 +4,7 @@ featureId: gpu-passthrough
 featureSlug: gpu-passthrough
 domain: terminus
 service: infra
-phase: dev-complete
+phase: complete
 track: tech-change
 milestones:
   businessplan: null
@@ -54,3 +54,4 @@ phase_transitions:
 docs:
   path: docs/terminus/infra/gpu-passthrough
   governance_docs_path: features/terminus/infra/gpu-passthrough/docs
+completed_at: '2026-04-26T13:40:13Z'

@@ -669,12 +669,12 @@ features:
   domain: terminus
   service: infra
   track: tech-change
-  status: techplan
+  status: archived
   owner: Todd Hintzmann
   plan_branch: gpu-passthrough-plan
   related_features:
     depends_on: []
     blocks: []
     related: []
-  updated_at: '2026-04-25T17:33:02Z'
+  updated_at: '2026-04-26T13:40:13Z'
   summary: ''
