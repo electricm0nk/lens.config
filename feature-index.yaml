@@ -692,3 +692,17 @@ features:
     related: []
   updated_at: '2026-04-26T16:17:12Z'
   summary: ''
+- id: fourdogs-etailpet-api-sales
+  featureId: fourdogs-etailpet-api-sales
+  featureSlug: sales
+  domain: fourdogs
+  service: etailpet-api
+  status: businessplan
+  owner: Todd Hintzmann
+  plan_branch: fourdogs-etailpet-api-sales-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  updated_at: '2026-04-27T13:35:19Z'
+  summary: ''

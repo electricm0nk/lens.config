@@ -1,0 +1,35 @@
+name: Sales
+description: ''
+featureId: fourdogs-etailpet-api-sales
+featureSlug: sales
+domain: fourdogs
+service: etailpet-api
+phase: businessplan
+track: quickplan
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-04-27T13:35:19Z'
+updated: '2026-04-27T13:35:19Z'
+phase_transitions:
+- phase: businessplan
+  timestamp: '2026-04-27T13:35:19Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/fourdogs/etailpet-api/fourdogs-etailpet-api-sales
+  governance_docs_path: features/fourdogs/etailpet-api/fourdogs-etailpet-api-sales/docs
