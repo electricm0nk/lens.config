@@ -31,5 +31,5 @@ phase_transitions:
   timestamp: '2026-04-27T13:35:19Z'
   user: Todd Hintzmann
 docs:
-  path: docs/fourdogs/etailpet-api/fourdogs-etailpet-api-sales
+  path: docs/fourdogs/etailpet-api/sales
   governance_docs_path: features/fourdogs/etailpet-api/fourdogs-etailpet-api-sales/docs
