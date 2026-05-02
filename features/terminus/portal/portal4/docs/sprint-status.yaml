@@ -1,0 +1,58 @@
+# generated: 2026-05-02
+# project: portal4
+# project_key: NOKEY
+# tracking_system: file-system
+# story_location: docs/terminus/portal/portal4/stories
+
+generated: "2026-05-02"
+project: portal4
+project_key: NOKEY
+tracking_system: file-system
+story_location: "docs/terminus/portal/portal4/stories"
+
+# SPRINT SEQUENCE (enforce strict order — each sprint has a deploy gate):
+#   Sprint 1: All visual fixes. No dependencies on sidecar.
+#   Sprint 2: Go sidecar + Helm + ESO + RBAC. Must deploy before Sprint 3 and 4.
+#   Sprint 3: Tab nav + GitHub proxy + Release Pipeline tab. Requires Sprint 2 deployed.
+#   Sprint 4: k8s pods + Prometheus proxy + FourDogsHealthPanel + MetricsPanel. Requires Sprint 2 + 3.
+#
+# CONDITIONAL:
+#   portal4-4-04 (FourDogsHealthPanel emailfetcher signal) is conditionally blocked on
+#   fourdogs-central /v1/health/emailfetcher; graceful "no signal" fallback allows partial-complete.
+
+development_status:
+  # --- Sprint 1: Visual Fixes and Service Config ---
+  epic-1: not-started
+  portal4-1-01-grafana-css-overflow: not-started
+  portal4-1-02-argocd-semaphore-icon-slugs: not-started
+  portal4-1-03-temporal-service-card: not-started
+  portal4-1-04-fourdogs-dev-url-split: not-started
+
+  # --- Sprint 2: Go Sidecar Foundation and Helm Wiring ---
+  epic-2: not-started
+  portal4-2-01-go-sidecar-scaffold: not-started
+  portal4-2-02-sidecar-dockerfile-ci: not-started
+  portal4-2-03-helm-chart-sidecar-nginx: not-started
+  portal4-2-04-eso-externalsecret-pat: not-started
+  portal4-2-05-serviceaccount-rbac: not-started
+
+  # --- Sprint 3: Tab Navigation and Release Pipeline Tab ---
+  epic-3: not-started
+  portal4-3-01-tab-navigation: not-started
+  portal4-3-02-github-proxy-route: not-started
+  portal4-3-03-release-pipeline-tab: not-started
+  portal4-3-04-release-pipeline-config: not-started
+
+  # --- Sprint 4: Deep Health Signals and Prometheus Metrics ---
+  epic-4: not-started
+  portal4-4-01-k8s-pods-routes: not-started
+  portal4-4-02-pods-tab: not-started
+  portal4-4-03-prometheus-proxy: not-started
+  portal4-4-04-fourdogs-health-panel: not-started  # conditional: fourdogs-central stub dep
+  portal4-4-05-metrics-wiring: not-started
+
+  target_repo: terminus-portal
+  target_branch: portal4
+  target_pr: null
+  implementation_commit: null
+  notes: "Sprint 1 ready to start. Vault PAT confirmed. Prometheus confirmed deployed."
