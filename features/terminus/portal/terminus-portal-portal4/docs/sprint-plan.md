@@ -21,7 +21,7 @@ updated_at: "2026-05-02T00:00:00Z"
 | Sprint | Goal | Stories | Complexity | Key Risk |
 |--------|------|---------|-----------|----------|
 | S1 | Visual fixes and service config | 4 | S, S, S, M | Icon slug discovery may require asset investigation |
-| S2 | Go sidecar foundation + Helm wiring | 4 | M, M, L, M | Sidecar RBAC misconfiguration |
+| S2 | Go sidecar foundation + Helm wiring | 5 | M, M, M, L, M | Sidecar RBAC misconfiguration |
 | S3 | Tab navigation + Release Pipeline tab | 4 | M, L, M, S | GitHub API rate limit; branch ref resolution edge cases |
 | S4 | Deep health signals + Prometheus metrics | 5 | M, M, M, L, S | fourdogs-central health stub scope; Prometheus TLS trust |
 
@@ -144,8 +144,7 @@ updated_at: "2026-05-02T00:00:00Z"
 | S2: ServiceAccount and RBAC | S4 (pod listing) |
 | S3: Tab navigation | S4 (Pods tab renders in tab nav) |
 | fourdogs-central `/v1/health/emailfetcher` (external) | S4-04 emailfetcher signal (graceful "no signal" if absent) |
-| fourdogs etailpet k8s Services exist | S4-04 readiness probe calls; verify before starting S4-04 |
-| Vault PAT provisioned | S2-04 (pre-condition; operator action) |
+| Vault PAT provisioned | S2-04 (pre-condition; confirmed present) |
 
 ---
 
@@ -154,7 +153,7 @@ updated_at: "2026-05-02T00:00:00Z"
 Applied to all stories in this plan:
 
 - [ ] Code merged to feature branch (`terminus-portal-portal4`)
-- [ ] No TypeScript/ESLint errors (or Go vet errors for sidecar stories)
+- [ ] No TypeScript/ESLint errors (React stories) or `go vet` + `go build ./...` passing (sidecar stories)
 - [ ] Manual smoke test completed in dev environment — the story's acceptance criteria observed working
 - [ ] No secrets committed to source code or visible in browser network traffic
 - [ ] Helm chart rendered with `helm template` — no schema validation errors

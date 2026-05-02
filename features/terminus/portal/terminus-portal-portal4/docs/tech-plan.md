@@ -74,6 +74,8 @@ Browser
 
 **Rationale:** Consistent with fourdogs services pattern. ESO keeps the secret out of git and Helm values; Vault rotation propagates automatically on pod restart.
 
+**Security constraint:** The sidecar must never log the PAT value, request `Authorization` headers, or environment variable contents in any code path. Structured logging must explicitly omit auth headers. Panic handlers must not dump env vars.
+
 **Alternatives rejected:**
 - *Helm values / sealed secret* — doesn't rotate without a re-deploy; Vault is already used for this cluster
 - *Direct Vault agent sidecar* — adds Vault agent container on top of sidecar; ESO is already in the cluster and simpler
