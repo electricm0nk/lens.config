@@ -124,8 +124,8 @@ updated_at: "2026-05-02T00:00:00Z"
 - Pods tab shows all pods in all cluster namespaces grouped by namespace; ready status, restart count, age visible
 - CPU load, memory usage, and pods-running metrics populate from Prometheus on Overview tab
 - Prometheus proxy handles internal CA TLS (CA cert mounted as ConfigMap, not skip-verify)
-- FourDogsHealthPanel shows: central-ui (up/down), central API (up/down via `/v1/health`), emailfetcher (last import timestamp + 24h error count from `/v1/health/emailfetcher` if available, else "no signal"), etailpet-trigger (readiness probe result), etailpet-sales-trigger (readiness probe result)
-- Pre-condition verified before S4-04: k8s Service exists for etailpet-trigger and etailpet-sales-trigger; if absent, a fourdogs-central Helm change is needed and this story is blocked
+- FourDogsHealthPanel shows: central-ui (up/down), central API (up/down via `/v1/health`), emailfetcher (last import timestamp + 24h error count from `/v1/health/emailfetcher` if available, else "no signal"), etailpet-trigger (k8s pod phase + restart count), etailpet-sales-trigger (k8s pod phase + restart count)
+- Note: etailpet trigger workers have no HTTP probes or Services; health signal is k8s pod status sourced from the existing `/api/k8s/pods` sidecar route — no additional infra required
 - All FourDogsHealthPanel health checks route through sidecar (no direct browser calls to internal cluster services)
 
 **Risks:**

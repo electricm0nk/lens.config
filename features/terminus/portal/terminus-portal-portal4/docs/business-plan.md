@@ -59,7 +59,7 @@ The cost of not building this: continued manual debugging loops when releases ge
 - Overview tab: quick HUD — service cards (fixed), pod health summary, Prometheus metrics (CPU, memory, pods running), links
 - Release Pipeline tab: per-repo develop/main branch latest tag+SHA+commit message+age, workflow run status per branch, runner status
 - Pods tab (or Overview section): all namespaces, pod name, ready state, restart count, age — grouped by namespace
-- Fourdogs service cards expanded: central-ui (up/down), central API (up/down via `/v1/health`), emailfetcher (last import timestamp + error count via import_audit), etailpet-trigger (readiness probe + last `trigger_success`), etailpet-sales-trigger (readiness probe + last `trigger_success`)
+- Fourdogs service cards expanded: central-ui (up/down), central API (up/down via `/v1/health`), emailfetcher (last import timestamp + error count via fourdogs-central health stub), etailpet-trigger (k8s pod phase + restart count — no HTTP probe exists), etailpet-sales-trigger (k8s pod phase + restart count — no HTTP probe exists)
 - Temporal agent service card added
 - ArgoCD and Semaphore icon fixes
 - Fourdogs card dev-site link (`https://central-dev.fourdogspetsupplies.com/login`)
@@ -74,7 +74,7 @@ The cost of not building this: continued manual debugging loops when releases ge
 - Write operations (no kubectl apply, no ArgoCD sync triggers from portal)
 - Authentication / access control on the portal itself
 - Mobile/responsive layout changes
-- etailpet trigger health from log scraping (probe endpoints are the v1 signal)
+- etailpet trigger health beyond pod status (no HTTP probe endpoints exist in current deployments)
 
 ## Risks and Mitigations
 
@@ -97,9 +97,9 @@ The cost of not building this: continued manual debugging loops when releases ge
 | k8s API (in-cluster) | Platform | ServiceAccount projected token; standard in-cluster client config |
 | fourdogs-central `/v1/health` endpoint | Application | Existing; used for API health check |
 | fourdogs-central-ui deployment health | Application | HTTP check against deployed pod or service |
-| emailfetcher `/healthz` (if exposed) or central health stub | Application | Needs confirmation in tech plan; may require a small addition to fourdogs-central health endpoint |
-| etailpet-trigger `/healthz` + `/readyz` | Application | Already implemented (port 8080) |
-| etailpet-sales-trigger `/healthz` + `/readyz` | Application | Already implemented (port 8080) |
+| fourdogs-central `/v1/health/emailfetcher` stub | Application | New endpoint needed in fourdogs-central; reads `import_audit` last success + error count |
+| etailpet-trigger k8s pod status | Platform | No HTTP probe or Service exists; pod phase + restart count via `/api/k8s/pods` sidecar route |
+| etailpet-sales-trigger k8s pod status | Platform | No HTTP probe or Service exists; pod phase + restart count via `/api/k8s/pods` sidecar route |
 
 ## Timeline Expectations
 
