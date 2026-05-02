@@ -1,0 +1,35 @@
+name: portal4
+description: ''
+featureId: terminus-portal-portal4
+featureSlug: portal4
+domain: terminus
+service: portal
+phase: expressplan
+track: express
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-05-02T13:57:58Z'
+updated: '2026-05-02T13:57:58Z'
+phase_transitions:
+- phase: expressplan
+  timestamp: '2026-05-02T13:57:58Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/terminus/portal/terminus-portal-portal4
+  governance_docs_path: features/terminus/portal/terminus-portal-portal4/docs

@@ -706,3 +706,17 @@ features:
     related: []
   updated_at: '2026-04-27T13:35:19Z'
   summary: ''
+- id: terminus-portal-portal4
+  featureId: terminus-portal-portal4
+  featureSlug: portal4
+  domain: terminus
+  service: portal
+  status: expressplan
+  owner: Todd Hintzmann
+  plan_branch: terminus-portal-portal4-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  updated_at: '2026-05-02T13:57:58Z'
+  summary: ''
