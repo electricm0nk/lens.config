@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 doc_type: tech-plan
 status: draft
 goal: "Design persistent Qwen loading strategy with warmup automation and ollama configuration hardening"

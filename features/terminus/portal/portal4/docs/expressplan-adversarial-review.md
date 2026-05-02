@@ -1,12 +1,12 @@
 ---
-feature: terminus-portal-portal4
+feature: portal4
 doc_type: adversarial-review
 status: complete
 overall_rating: pass-with-warnings
 reviewed_at: "2026-05-02T00:00:00Z"
 ---
 
-# Adversarial Review: terminus-portal-portal4
+# Adversarial Review: portal4
 
 **Reviewed:** 2026-05-02  
 **Overall Rating:** pass-with-warnings

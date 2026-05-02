@@ -1,6 +1,6 @@
 # Retrospective: Qwen Adapter Container Warmup
 
-**Feature:** terminus-inference-qwen-adapter  
+**Feature:** qwen-adapter  
 **Completed:** 2026-04-26  
 **Track:** express  
 **Domain/Service:** terminus/inference  

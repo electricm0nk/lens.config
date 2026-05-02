@@ -678,14 +678,14 @@ features:
     related: []
   updated_at: '2026-04-26T13:40:13Z'
   summary: ''
-- id: terminus-inference-qwen-adapter
-  featureId: terminus-inference-qwen-adapter
+- id: qwen-adapter
+  featureId: qwen-adapter
   featureSlug: qwen-adapter
   domain: terminus
   service: inference
   status: archived
   owner: Todd Hintzmann
-  plan_branch: terminus-inference-qwen-adapter-plan
+  plan_branch: qwen-adapter-plan
   related_features:
     depends_on: []
     blocks: []

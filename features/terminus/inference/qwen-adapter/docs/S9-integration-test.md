@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 story_id: S9
 title: Integration Test
 epic: E3

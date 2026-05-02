@@ -1,5 +1,5 @@
 ---
-feature: terminus-portal-portal4
+feature: portal4
 doc_type: sprint-plan
 status: draft
 goal: "Deliver the portal4 feature in four focused sprints: visual fixes → Go sidecar foundation → Release Pipeline tab → deep health and metrics wiring"
@@ -14,7 +14,7 @@ blocks: []
 updated_at: "2026-05-02T00:00:00Z"
 ---
 
-# Sprint Plan: terminus-portal-portal4
+# Sprint Plan: portal4
 
 ## Sprint Overview
 
@@ -152,7 +152,7 @@ updated_at: "2026-05-02T00:00:00Z"
 
 Applied to all stories in this plan:
 
-- [ ] Code merged to feature branch (`terminus-portal-portal4`)
+- [ ] Code merged to feature branch (`portal4`)
 - [ ] No TypeScript/ESLint errors (React stories) or `go vet` + `go build ./...` passing (sidecar stories)
 - [ ] Manual smoke test completed in dev environment — the story's acceptance criteria observed working
 - [ ] No secrets committed to source code or visible in browser network traffic

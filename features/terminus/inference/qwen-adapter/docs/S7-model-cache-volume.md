@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 story_id: S7
 title: Model Cache Volume
 epic: E2

@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 doc_type: expressplan-adversarial-review
 status: approved
 gate: expressplan-completion
@@ -15,7 +15,7 @@ updated_at: '2026-04-26T14:30:00Z'
 
 # ExpressPlan Adversarial Review: Qwen Adapter Container Warmup
 
-**Feature:** terminus-inference-qwen-adapter  
+**Feature:** qwen-adapter  
 **Phase:** expressplan  
 **Source:** phase-complete  
 **Verdict:** **PASS** ✅

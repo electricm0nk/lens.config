@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 story_id: S8
 title: Unit Tests
 epic: E2

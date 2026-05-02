@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 story_id: S10
 title: Production Checklist
 epic: E3

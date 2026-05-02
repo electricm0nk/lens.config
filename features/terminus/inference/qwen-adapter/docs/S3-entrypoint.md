@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 story_id: S3
 title: Container Entrypoint
 epic: E1

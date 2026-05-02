@@ -1,6 +1,6 @@
 # portal4
 
-> Status: expressplan | Feature ID: `terminus-portal-portal4`
+> Status: expressplan | Feature ID: `portal4`
 
 Auto-generated stub. Update as planning progresses.
 

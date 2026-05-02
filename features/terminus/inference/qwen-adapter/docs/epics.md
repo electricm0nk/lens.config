@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 doc_type: epics
 status: approved
 goal: "Eliminate JIT cold-start by preloading Qwen into GPU memory and persisting indefinitely"

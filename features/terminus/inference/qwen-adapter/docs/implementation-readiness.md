@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 doc_type: implementation-readiness
 status: approved
 goal: "Assess readiness to begin development on the Qwen adapter warmup feature"

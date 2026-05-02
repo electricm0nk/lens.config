@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 doc_type: business-plan
 status: draft
 goal: "Eliminate JIT cold-start delays by preloading Qwen into memory and persisting indefinitely"

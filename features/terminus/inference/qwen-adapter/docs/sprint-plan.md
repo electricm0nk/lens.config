@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 doc_type: sprint-plan
 status: draft
 goal: "Organize warmup implementation and persistence hardening into delivery sprints"

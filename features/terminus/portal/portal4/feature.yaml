@@ -1,6 +1,6 @@
 name: portal4
 description: ''
-featureId: terminus-portal-portal4
+featureId: portal4
 featureSlug: portal4
 domain: terminus
 service: portal
@@ -39,5 +39,5 @@ phase_transitions:
   user: Todd Hintzmann
   note: 'finalizeplan review approved (0 high, 1 medium, 2 low — all resolved); 18 story files written; implementation-readiness gate passed; final PR open'
 docs:
-  path: docs/terminus/portal/terminus-portal-portal4
-  governance_docs_path: features/terminus/portal/terminus-portal-portal4/docs
+  path: docs/terminus/portal/portal4
+  governance_docs_path: features/terminus/portal/portal4/docs

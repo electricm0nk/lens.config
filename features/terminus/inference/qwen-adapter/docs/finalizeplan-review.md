@@ -1,5 +1,5 @@
 ---
-feature: terminus-inference-qwen-adapter
+feature: qwen-adapter
 doc_type: finalizeplan-review
 status: approved
 goal: "Final cross-artifact review and governance impact check before FinalizePlan bundle handoff"

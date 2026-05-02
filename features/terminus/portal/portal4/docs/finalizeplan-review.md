@@ -1,5 +1,5 @@
 ---
-feature: terminus-portal-portal4
+feature: portal4
 doc_type: finalizeplan-review
 status: approved
 goal: "Validate the complete portal4 planning set is internally consistent, cross-feature safe, and dev-ready; confirm sprint S1 can start immediately"
@@ -10,7 +10,7 @@ blocks: []
 updated_at: "2026-05-02T00:00:00Z"
 ---
 
-# FinalizePlan Review: terminus-portal-portal4
+# FinalizePlan Review: portal4
 
 **Reviewed:** 2026-05-02  
 **Phase:** finalizeplan  
@@ -21,7 +21,7 @@ updated_at: "2026-05-02T00:00:00Z"
 
 ## Summary
 
-The complete planning set (business-plan, tech-plan, sprint-plan + expressplan adversarial review with post-review corrections) is internally consistent and cross-feature safe. All three open questions from the expressplan review were resolved before finalizeplan entry. The party-mode challenge round (architect, PM, QA, scrum master) surfaced one new medium finding (S2 sprint story count now 5 — table header shows 4, minor inconsistency) and confirmed the planning set is development-ready. The `prometheus-wiring` feature at finalizeplan-complete confirms Prometheus is deployed. No blocking cross-feature conflicts. One governance overlap note: the `releaseorchestrator` feature at preplan covers similar territory to portal4's Release Pipeline tab — flagged for awareness only, not a blocker at this scope. S1 can start immediately on the `terminus-portal-portal4` branch.
+The complete planning set (business-plan, tech-plan, sprint-plan + expressplan adversarial review with post-review corrections) is internally consistent and cross-feature safe. All three open questions from the expressplan review were resolved before finalizeplan entry. The party-mode challenge round (architect, PM, QA, scrum master) surfaced one new medium finding (S2 sprint story count now 5 — table header shows 4, minor inconsistency) and confirmed the planning set is development-ready. The `prometheus-wiring` feature at finalizeplan-complete confirms Prometheus is deployed. No blocking cross-feature conflicts. One governance overlap note: the `releaseorchestrator` feature at preplan covers similar territory to portal4's Release Pipeline tab — flagged for awareness only, not a blocker at this scope. S1 can start immediately on the `portal4` branch.
 
 ---
 
@@ -129,8 +129,8 @@ The complete planning set (business-plan, tech-plan, sprint-plan + expressplan a
 | Sprint S1 has no unresolved blockers | ✅ |
 | Sprint S2 pre-conditions met (Vault PAT confirmed) | ✅ |
 | Sidecar CI registry confirmed (GHCR, same org) | ✅ |
-| `terminus-portal-portal4` branch exists | ✅ |
-| `terminus-portal-portal4-plan` branch exists | ✅ |
+| `portal4` branch exists | ✅ |
+| `portal4-plan` branch exists | ✅ |
 | Cross-feature conflicts | None blocking |
 
 **Decision: approved for planning PR creation.**

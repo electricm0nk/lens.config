@@ -1,6 +1,6 @@
 # Archive Summary: Qwen Adapter Container Warmup
 
-**Feature ID:** terminus-inference-qwen-adapter
+**Feature ID:** qwen-adapter
 **Domain:** terminus / inference
 **Track:** express
 **Priority:** medium

@@ -1,5 +1,5 @@
 ---
-feature: terminus-portal-portal4
+feature: portal4
 doc_type: business-plan
 status: draft
 goal: "Transform the Terminus Portal from a basic service status board into an operational command centre with tab navigation, a Go backend sidecar, deep per-microservice health signals, live k8s pod health view, and a Release Pipeline tab giving full develop-to-production deployment visibility."
@@ -15,7 +15,7 @@ blocks: []
 updated_at: "2026-05-02T00:00:00Z"
 ---
 
-# Business Plan: terminus-portal-portal4
+# Business Plan: portal4
 
 ## Executive Summary
 

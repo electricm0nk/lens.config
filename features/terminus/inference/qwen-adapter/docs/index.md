@@ -1,7 +1,7 @@
 # terminus-inference-qwen-warmup — Project Index
 
 **Generated:** 2026-04-26  
-**Feature:** terminus-inference-qwen-adapter  
+**Feature:** qwen-adapter  
 **Repository:** `electricm0nk/terminus-inference-qwen-warmup`  
 **Domain/Service:** terminus/inference  
 **Branch:** `main` (squash-merged from `feature/qwen-warmup` — PR #1)

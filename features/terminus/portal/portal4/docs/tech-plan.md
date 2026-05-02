@@ -1,5 +1,5 @@
 ---
-feature: terminus-portal-portal4
+feature: portal4
 doc_type: tech-plan
 status: draft
 goal: "Introduce a Go backend sidecar into the portal pod, restructure the React SPA into tabbed navigation (Overview, Release Pipeline, Pods), wire Fourdogs per-microservice health signals, proxy k8s and Prometheus APIs through the sidecar, and fix all visual regressions from portal3."
@@ -19,7 +19,7 @@ blocks: []
 updated_at: "2026-05-02T00:00:00Z"
 ---
 
-# Tech Plan: terminus-portal-portal4
+# Tech Plan: portal4
 
 ## Technical Summary
 
@@ -249,7 +249,7 @@ The only data-adjacent change: `fourdogs-central` adds a `/v1/health/emailfetche
 
 ## Rollout Strategy
 
-**Approach:** Direct deploy to dev (`terminus-portal-portal4` branch → develop → ArgoCD sync).
+**Approach:** Direct deploy to dev (`portal4` branch → develop → ArgoCD sync).
 
 **Phased order:**
 1. Visual fixes only (icon slugs, Grafana overflow, add Temporal card) — commit and verify in dev
