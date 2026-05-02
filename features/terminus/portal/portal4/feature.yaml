@@ -4,13 +4,13 @@ featureId: portal4
 featureSlug: portal4
 domain: terminus
 service: portal
-phase: finalizeplan-complete
+phase: dev
 track: express
 milestones:
   businessplan: '2026-05-02T00:00:00Z'
   techplan: '2026-05-02T00:00:00Z'
   finalizeplan: '2026-05-02T00:00:00Z'
-  dev-ready: null
+  dev-ready: '2026-05-02T00:00:00Z'
   dev-complete: null
 team:
 - username: Todd Hintzmann
@@ -18,7 +18,11 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+  - repo: TargetProjects/terminus/portal/terminus-portal
+    branch_mode: feature-id
+    working_branch: feature/portal4
+    pr_base_branch: main
 links:
   retrospective: null
   issues: []
@@ -38,6 +42,10 @@ phase_transitions:
   timestamp: '2026-05-02T00:00:00Z'
   user: Todd Hintzmann
   note: 'finalizeplan review approved (0 high, 1 medium, 2 low — all resolved); 18 story files written; implementation-readiness gate passed; final PR open'
+- phase: dev
+  timestamp: '2026-05-02T00:00:00Z'
+  user: Todd Hintzmann
+  note: 'dev activated; branch feature/portal4 created in terminus-portal; epic 1 starting (visual fixes)'
 docs:
   path: docs/terminus/portal/portal4
   governance_docs_path: features/terminus/portal/portal4/docs
