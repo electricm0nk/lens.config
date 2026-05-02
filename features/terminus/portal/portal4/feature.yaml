@@ -11,7 +11,7 @@ milestones:
   techplan: '2026-05-02T00:00:00Z'
   finalizeplan: '2026-05-02T00:00:00Z'
   dev-ready: '2026-05-02T00:00:00Z'
-  dev-complete: null
+  dev-complete: '2026-05-09T13:30:00Z'
 team:
 - username: Todd Hintzmann
   role: lead
@@ -26,7 +26,7 @@ target_repos:
 links:
   retrospective: null
   issues: []
-  pull_request: null
+  pull_request: https://github.com/electricm0nk/terminus-portal/pull/21
 priority: medium
 created: '2026-05-02T13:57:58Z'
 updated: '2026-05-02T00:00:00Z'
@@ -46,6 +46,10 @@ phase_transitions:
   timestamp: '2026-05-02T00:00:00Z'
   user: Todd Hintzmann
   note: 'dev activated; branch feature/portal4 created in terminus-portal; epic 1 starting (visual fixes)'
+- phase: dev-complete
+  timestamp: '2026-05-09T13:30:00Z'
+  user: Todd Hintzmann
+  note: 'all 4 epics complete (19 stories); 101 tests passing; build 179.51 kB; adversarial review + party-mode blind-spot challenge passed; PR #21 open feature/portal4 → main'
 docs:
   path: docs/terminus/portal/portal4
   governance_docs_path: features/terminus/portal/portal4/docs
