@@ -4,12 +4,12 @@ featureId: terminus-portal-portal4
 featureSlug: portal4
 domain: terminus
 service: portal
-phase: finalizeplan
+phase: finalizeplan-complete
 track: express
 milestones:
   businessplan: '2026-05-02T00:00:00Z'
   techplan: '2026-05-02T00:00:00Z'
-  finalizeplan: null
+  finalizeplan: '2026-05-02T00:00:00Z'
   dev-ready: null
   dev-complete: null
 team:
@@ -34,6 +34,10 @@ phase_transitions:
   timestamp: '2026-05-02T00:00:00Z'
   user: Todd Hintzmann
   note: 'expressplan complete — adversarial review pass-with-warnings (3 high, 5 medium); all findings documented and mitigated in sprint plan'
+- phase: finalizeplan-complete
+  timestamp: '2026-05-02T00:00:00Z'
+  user: Todd Hintzmann
+  note: 'finalizeplan review approved (0 high, 1 medium, 2 low — all resolved); 18 story files written; implementation-readiness gate passed; final PR open'
 docs:
   path: docs/terminus/portal/terminus-portal-portal4
   governance_docs_path: features/terminus/portal/terminus-portal-portal4/docs
