@@ -4,7 +4,7 @@ featureId: argocd-341-upgrade
 featureSlug: argocd-341-upgrade
 domain: terminus
 service: infra
-phase: expressplan
+phase: expressplan-complete
 track: express
 milestones:
   businessplan: null
