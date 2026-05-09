@@ -1,0 +1,35 @@
+name: ArgoCD 3.4.1 Upgrade
+description: ''
+featureId: argocd-341-upgrade
+featureSlug: argocd-341-upgrade
+domain: terminus
+service: infra
+phase: expressplan
+track: express
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-05-09T20:03:37Z'
+updated: '2026-05-09T20:03:37Z'
+phase_transitions:
+- phase: expressplan
+  timestamp: '2026-05-09T20:03:37Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/terminus/infra/argocd-341-upgrade
+  governance_docs_path: features/terminus/infra/argocd-341-upgrade/docs

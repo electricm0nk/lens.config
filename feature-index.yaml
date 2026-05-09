@@ -722,3 +722,20 @@ features:
   updated_at: '2026-05-05T23:30:00Z'
   summary: 'Portal v4.0 complete: 4 epics, 19 stories, 101 tests, visual refresh +
     GitHub proxy + Prometheus metrics + release pipeline tabs'
+- featureId: argocd-341-upgrade
+  id: argocd-341-upgrade
+  name: ArgoCD 3.4.1 Upgrade
+  featureSlug: argocd-341-upgrade
+  domain: terminus
+  service: infra
+  status: expressplan
+  track: express
+  owner: Todd Hintzmann
+  plan_branch: argocd-341-upgrade-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-09T20:03:37Z'
+  updated_at: '2026-05-09T20:03:37Z'
+  summary: ''
