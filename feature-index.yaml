@@ -791,3 +791,20 @@ features:
   created: '2026-05-10T17:01:04Z'
   updated_at: '2026-05-10T17:01:04Z'
   summary: ''
+- featureId: fourdogs-central-orders-manual-refresh
+  id: fourdogs-central-orders-manual-refresh
+  name: Orders Stale Data Manual Refresh
+  featureSlug: orders-manual-refresh
+  domain: fourdogs
+  service: central
+  status: finalizeplan
+  track: quickdev
+  owner: Todd Hintzmann
+  plan_branch: fourdogs-central-orders-manual-refresh-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-10T17:01:12Z'
+  updated_at: '2026-05-10T17:01:12Z'
+  summary: ''

@@ -1,0 +1,35 @@
+name: Orders Stale Data Manual Refresh
+description: ''
+featureId: fourdogs-central-orders-manual-refresh
+featureSlug: orders-manual-refresh
+domain: fourdogs
+service: central
+phase: finalizeplan
+track: quickdev
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-05-10T17:01:12Z'
+updated: '2026-05-10T17:01:12Z'
+phase_transitions:
+- phase: finalizeplan
+  timestamp: '2026-05-10T17:01:12Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/fourdogs/central/fourdogs-central-orders-manual-refresh
+  governance_docs_path: features/fourdogs/central/fourdogs-central-orders-manual-refresh/docs
