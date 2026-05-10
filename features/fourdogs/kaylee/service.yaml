@@ -1,0 +1,9 @@
+kind: service
+id: fourdogs-kaylee
+name: kaylee
+domain: fourdogs
+service: kaylee
+status: active
+owner: Todd Hintzmann
+created: '2026-05-10T13:47:40Z'
+updated: '2026-05-10T13:47:40Z'

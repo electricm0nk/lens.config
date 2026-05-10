@@ -740,3 +740,20 @@ features:
   updated_at: '2026-05-09T20:03:37Z'
   summary: ''
   phase: complete
+- featureId: fourdogs-kaylee-order-update-bug
+  id: fourdogs-kaylee-order-update-bug
+  name: Order Update Bug
+  featureSlug: order-update-bug
+  domain: fourdogs
+  service: kaylee
+  status: techplan
+  track: hotfix-express
+  owner: Todd Hintzmann
+  plan_branch: fourdogs-kaylee-order-update-bug-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-10T13:47:40Z'
+  updated_at: '2026-05-10T13:47:40Z'
+  summary: ''
