@@ -1,0 +1,35 @@
+name: IT Watchdog Agent
+description: ''
+featureId: terminus-watchdog-agent
+featureSlug: agent
+domain: terminus
+service: watchdog
+phase: preplan
+track: full
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-05-10T16:25:10Z'
+updated: '2026-05-10T16:25:10Z'
+phase_transitions:
+- phase: preplan
+  timestamp: '2026-05-10T16:25:10Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/terminus/watchdog/terminus-watchdog-agent
+  governance_docs_path: features/terminus/watchdog/terminus-watchdog-agent/docs

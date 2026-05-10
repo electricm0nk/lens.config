@@ -757,3 +757,20 @@ features:
   created: '2026-05-10T13:47:40Z'
   updated_at: '2026-05-10T13:47:40Z'
   summary: ''
+- featureId: terminus-watchdog-agent
+  id: terminus-watchdog-agent
+  name: IT Watchdog Agent
+  featureSlug: agent
+  domain: terminus
+  service: watchdog
+  status: preplan
+  track: full
+  owner: Todd Hintzmann
+  plan_branch: terminus-watchdog-agent-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-10T16:25:10Z'
+  updated_at: '2026-05-10T16:25:10Z'
+  summary: ''
