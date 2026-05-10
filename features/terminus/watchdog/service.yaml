@@ -1,0 +1,9 @@
+kind: service
+id: terminus-watchdog
+name: Watchdog
+domain: terminus
+service: watchdog
+status: active
+owner: Todd Hintzmann
+created: '2026-05-10T16:24:48Z'
+updated: '2026-05-10T16:24:48Z'
