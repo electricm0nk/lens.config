@@ -4,12 +4,12 @@ featureId: fourdogs-central-orders-manual-refresh
 featureSlug: orders-manual-refresh
 domain: fourdogs
 service: central
-phase: finalizeplan
+phase: finalizeplan-complete
 track: quickdev
 milestones:
   businessplan: null
   techplan: null
-  finalizeplan: null
+  finalizeplan: "2026-05-10"
   dev-ready: null
   dev-complete: null
 team:
