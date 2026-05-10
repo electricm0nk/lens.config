@@ -774,3 +774,20 @@ features:
   created: '2026-05-10T16:25:10Z'
   updated_at: '2026-05-10T16:25:10Z'
   summary: ''
+- featureId: fourdogs-etailpet-api-trigger-sync-fix
+  id: fourdogs-etailpet-api-trigger-sync-fix
+  name: Etailpet Trigger Sync Fix
+  featureSlug: trigger-sync-fix
+  domain: fourdogs
+  service: etailpet-api
+  status: finalizeplan
+  track: quickdev
+  owner: Todd Hintzmann
+  plan_branch: fourdogs-etailpet-api-trigger-sync-fix-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-10T17:01:04Z'
+  updated_at: '2026-05-10T17:01:04Z'
+  summary: ''
