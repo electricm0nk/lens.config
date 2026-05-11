@@ -774,7 +774,7 @@ features:
   created: '2026-05-10T16:25:10Z'
   updated_at: '2026-05-10T16:25:10Z'
   summary: ''
-  phase: businessplan-complete
+  phase: finalizeplan-complete
 - featureId: fourdogs-etailpet-api-trigger-sync-fix
   id: fourdogs-etailpet-api-trigger-sync-fix
   name: Etailpet Trigger Sync Fix
