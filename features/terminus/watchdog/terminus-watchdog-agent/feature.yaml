@@ -4,7 +4,7 @@ featureId: terminus-watchdog-agent
 featureSlug: agent
 domain: terminus
 service: watchdog
-phase: preplan
+phase: businessplan
 track: full
 milestones:
   businessplan: null
@@ -22,14 +22,18 @@ target_repos: []
 links:
   retrospective: null
   issues: []
-  pull_request: null
+  pull_request: https://github.com/electricm0nk/bmad.lens.projects/pull/199
 priority: medium
 created: '2026-05-10T16:25:10Z'
-updated: '2026-05-10T16:25:10Z'
+updated: '2026-05-10T21:00:00Z'
 phase_transitions:
 - phase: preplan
   timestamp: '2026-05-10T16:25:10Z'
   user: Todd Hintzmann
+- phase: businessplan
+  timestamp: '2026-05-10T21:00:00Z'
+  user: Todd Hintzmann
+  note: PrePlan pass-with-warnings; plan PR #199 created
 docs:
   path: docs/terminus/watchdog/terminus-watchdog-agent
   governance_docs_path: features/terminus/watchdog/terminus-watchdog-agent/docs
