@@ -18,7 +18,8 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- https://github.com/electricm0nk/terminus.watchdog
 links:
   retrospective: null
   issues: []
