@@ -4,7 +4,7 @@ featureId: terminus-watchdog-agent
 featureSlug: agent
 domain: terminus
 service: watchdog
-phase: businessplan
+phase: businessplan-complete
 track: full
 milestones:
   businessplan: null
@@ -33,7 +33,7 @@ phase_transitions:
 - phase: businessplan
   timestamp: '2026-05-10T21:00:00Z'
   user: Todd Hintzmann
-  note: PrePlan pass-with-warnings; plan PR #199 created
+  note: PrePlan pass-with-warnings; plan PR
 docs:
   path: docs/terminus/watchdog/terminus-watchdog-agent
   governance_docs_path: features/terminus/watchdog/terminus-watchdog-agent/docs
