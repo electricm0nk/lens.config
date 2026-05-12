@@ -4,7 +4,7 @@ featureId: terminus-watchdog-agent
 featureSlug: agent
 domain: terminus
 service: watchdog
-phase: finalizeplan-complete
+phase: dev-complete
 track: full
 milestones:
   businessplan: null
