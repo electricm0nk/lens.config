@@ -35,6 +35,30 @@ All lifecycle tracks are permitted: `full`, `express`, `quickdev`, `hotfix-expre
 Peer review is enforced for all features in this service.
 Additional participants may be named at the repo level.
 
+## Deployment Model
+
+**Production only — no dev environment.**
+
+The Watchdog service runs a single production deployment. There is no dev namespace, dev ArgoCD
+application, or dev values file in use. `values-dev.yaml` in `terminus.infra` must not be
+configured or promoted to.
+
+## Release Flow
+
+All code changes must be delivered via **PR → merge to `main`**. Direct commits to `main` are not
+permitted for feature or fix work. After merging, a release is triggered by pushing a semver tag:
+
+```
+git tag v<major>.<minor>.<patch>
+git push origin v<major>.<minor>.<patch>
+```
+
+The release workflow (`release.yml`) builds and pushes the Docker image to GHCR, then promotes
+the semver tag into `terminus.infra/platforms/k3s/helm/terminus-watchdog/values.yaml` on `main`.
+ArgoCD syncs automatically from there.
+
+**No Temporal ReleaseWorkflow** is used for this service. ArgoCD is the sole deployment mechanism.
+
 ## Notes
 
 This constitution was initialized with service defaults.
