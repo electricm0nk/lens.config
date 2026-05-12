@@ -1,11 +1,17 @@
 ---
-featureId: terminus-watchdog-agent
-name: IT Watchdog Agent
-status: preplan
-track: full
-updated_at: 2026-05-10T16:25:10Z
+feature: terminus-watchdog-agent
+doc_type: summary
+status: archived
+archived_at: 2026-05-12T02:51:03.284506+00:00
 ---
 
 # IT Watchdog Agent
 
-<!-- Auto-generated summary stub. Update when planning begins. -->
+**Domain:** terminus  
+**Service:** watchdog  
+**Track:** full  
+**Archived:** 2026-05-12T02:51:03.284506+00:00
+
+## Archive Notes
+
+Feature archived via `lens-complete`. See `feature.yaml` for full lifecycle history.
