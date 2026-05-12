@@ -781,7 +781,7 @@ features:
   featureSlug: trigger-sync-fix
   domain: fourdogs
   service: etailpet-api
-  status: finalizeplan
+  status: archived
   track: quickdev
   owner: Todd Hintzmann
   plan_branch: fourdogs-etailpet-api-trigger-sync-fix-plan
@@ -790,7 +790,7 @@ features:
     blocks: []
     related: []
   created: '2026-05-10T17:01:04Z'
-  updated_at: '2026-05-10T17:01:04Z'
+  updated_at: '2026-05-12T03:05:08.775314+00:00'
   summary: ''
 - featureId: fourdogs-central-orders-manual-refresh
   id: fourdogs-central-orders-manual-refresh

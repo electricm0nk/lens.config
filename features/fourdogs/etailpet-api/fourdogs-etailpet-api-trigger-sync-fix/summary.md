@@ -1,11 +1,17 @@
 ---
-featureId: fourdogs-etailpet-api-trigger-sync-fix
-name: Etailpet Trigger Sync Fix
-status: finalizeplan
-track: quickdev
-updated_at: 2026-05-10T17:01:04Z
+feature: fourdogs-etailpet-api-trigger-sync-fix
+doc_type: summary
+status: archived
+archived_at: 2026-05-12T03:05:08.775314+00:00
 ---
 
 # Etailpet Trigger Sync Fix
 
-<!-- Auto-generated summary stub. Update when planning begins. -->
+**Domain:** fourdogs  
+**Service:** etailpet-api  
+**Track:** quickdev  
+**Archived:** 2026-05-12T03:05:08.775314+00:00
+
+## Archive Notes
+
+Feature archived via `lens-complete`. See `feature.yaml` for full lifecycle history.

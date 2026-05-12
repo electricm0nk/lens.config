@@ -4,7 +4,7 @@ featureId: fourdogs-etailpet-api-trigger-sync-fix
 featureSlug: trigger-sync-fix
 domain: fourdogs
 service: etailpet-api
-phase: dev-complete
+phase: complete
 track: quickdev
 milestones:
   businessplan: null
@@ -36,7 +36,11 @@ phase_transitions:
   user: Todd Hintzmann
 - phase: dev-complete
   timestamp: '2026-05-12T03:02:22Z'
-  user: Todd Hintzmann (auto: lens-dev)
+  user: 'Todd Hintzmann (auto: lens-dev)'
+- phase: complete
+  timestamp: '2026-05-12T03:05:08.775314+00:00'
+  user: lens-complete
 docs:
   path: docs/fourdogs/etailpet-api/fourdogs-etailpet-api-trigger-sync-fix
   governance_docs_path: features/fourdogs/etailpet-api/fourdogs-etailpet-api-trigger-sync-fix/docs
+completed_at: '2026-05-12T03:05:08.775314+00:00'
