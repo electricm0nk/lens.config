@@ -763,7 +763,7 @@ features:
   featureSlug: agent
   domain: terminus
   service: watchdog
-  status: preplan
+  status: dev-complete
   track: full
   owner: Todd Hintzmann
   plan_branch: terminus-watchdog-agent-plan
@@ -774,7 +774,7 @@ features:
   created: '2026-05-10T16:25:10Z'
   updated_at: '2026-05-10T16:25:10Z'
   summary: ''
-  phase: finalizeplan-complete
+  phase: dev-complete
 - featureId: fourdogs-etailpet-api-trigger-sync-fix
   id: fourdogs-etailpet-api-trigger-sync-fix
   name: Etailpet Trigger Sync Fix
