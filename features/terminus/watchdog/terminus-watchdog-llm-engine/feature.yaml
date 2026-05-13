@@ -4,10 +4,10 @@ featureId: terminus-watchdog-llm-engine
 featureSlug: llm-engine
 domain: terminus
 service: watchdog
-phase: preplan-complete
+phase: businessplan-complete
 track: full
 milestones:
-  businessplan: null
+  businessplan: '2026-05-13'
   techplan: null
   finalizeplan: null
   dev-ready: null
@@ -25,13 +25,19 @@ links:
   pull_request: null
 priority: medium
 created: '2026-05-13T11:47:24Z'
-updated: '2026-05-13T12:27:58Z'
+updated: '2026-05-13T13:45:00Z'
 phase_transitions:
 - phase: preplan
   timestamp: '2026-05-13T11:47:24Z'
   user: Todd Hintzmann
 - phase: preplan-complete
   timestamp: '2026-05-13T12:27:58Z'
+  user: Todd Hintzmann
+- phase: businessplan
+  timestamp: '2026-05-13T12:45:00Z'
+  user: Todd Hintzmann
+- phase: businessplan-complete
+  timestamp: '2026-05-13T13:45:00Z'
   user: Todd Hintzmann
 docs:
   path: docs/terminus/watchdog/terminus-watchdog-llm-engine
