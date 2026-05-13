@@ -1,0 +1,35 @@
+name: Watchdog LLM Engine
+description: ''
+featureId: terminus-watchdog-llm-engine
+featureSlug: llm-engine
+domain: terminus
+service: watchdog
+phase: preplan
+track: full
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-05-13T11:47:24Z'
+updated: '2026-05-13T11:47:24Z'
+phase_transitions:
+- phase: preplan
+  timestamp: '2026-05-13T11:47:24Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/terminus/watchdog/terminus-watchdog-llm-engine
+  governance_docs_path: features/terminus/watchdog/terminus-watchdog-llm-engine/docs

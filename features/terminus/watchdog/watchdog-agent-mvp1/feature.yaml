@@ -1,6 +1,6 @@
 name: IT Watchdog Agent
 description: ''
-featureId: terminus-watchdog-agent
+featureId: watchdog-agent-mvp1
 featureSlug: agent
 domain: terminus
 service: watchdog

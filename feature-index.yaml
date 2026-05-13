@@ -757,8 +757,8 @@ features:
   created: '2026-05-10T13:47:40Z'
   updated_at: '2026-05-10T13:47:40Z'
   summary: ''
-- featureId: terminus-watchdog-agent
-  id: terminus-watchdog-agent
+- featureId: watchdog-agent-mvp1
+  id: watchdog-agent-mvp1
   name: IT Watchdog Agent
   featureSlug: agent
   domain: terminus
@@ -766,7 +766,7 @@ features:
   status: archived
   track: full
   owner: Todd Hintzmann
-  plan_branch: terminus-watchdog-agent-plan
+  plan_branch: watchdog-agent-mvp1-plan
   related_features:
     depends_on: []
     blocks: []
@@ -808,4 +808,21 @@ features:
     related: []
   created: '2026-05-10T17:01:12Z'
   updated_at: '2026-05-10T17:01:12Z'
+  summary: ''
+- featureId: terminus-watchdog-llm-engine
+  id: terminus-watchdog-llm-engine
+  name: Watchdog LLM Engine
+  featureSlug: llm-engine
+  domain: terminus
+  service: watchdog
+  status: preplan
+  track: full
+  owner: Todd Hintzmann
+  plan_branch: terminus-watchdog-llm-engine-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-13T11:47:24Z'
+  updated_at: '2026-05-13T11:47:24Z'
   summary: ''
