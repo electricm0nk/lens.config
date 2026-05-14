@@ -4,14 +4,14 @@ featureId: terminus-inference-hermes-by-nous-research-install
 featureSlug: hermes-by-nous-research-install
 domain: hermes
 service: agent
-phase: finalizeplan-complete
+phase: dev-complete
 track: full
 milestones:
   businessplan: '2026-05-14T00:00:00Z'
   techplan: '2026-05-15T00:00:00Z'
   finalizeplan: '2026-05-14T00:00:00Z'
-  dev-ready: null
-  dev-complete: null
+  dev-ready: '2026-05-14T00:00:00Z'
+  dev-complete: '2026-05-14T00:00:00Z'
 team:
 - username: Todd Hintzmann
   role: lead
@@ -44,6 +44,12 @@ phase_transitions:
   verdict: pass-with-warnings
   review_artifact: finalizeplan-review.md
   governance_sha: 289a55f
+- phase: dev-complete
+  timestamp: '2026-05-14T00:00:00Z'
+  user: Todd Hintzmann
+  verdict: pass
+  review_artifact: null
+  governance_sha: null
 docs:
   path: docs/hermes/agent/hermes-agent-install
   governance_docs_path: features/hermes/agent/hermes-agent-install/docs
