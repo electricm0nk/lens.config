@@ -4,11 +4,11 @@ featureId: terminus-inference-hermes-by-nous-research-install
 featureSlug: hermes-by-nous-research-install
 domain: hermes
 service: agent
-phase: businessplan-complete
+phase: techplan-complete
 track: full
 milestones:
   businessplan: '2026-05-14T00:00:00Z'
-  techplan: null
+  techplan: '2026-05-15T00:00:00Z'
   finalizeplan: null
   dev-ready: null
   dev-complete: null
@@ -27,7 +27,7 @@ links:
   pull_request: null
 priority: medium
 created: '2026-05-14T12:48:57Z'
-updated: '2026-05-14T00:00:00Z'
+updated: '2026-05-15T00:00:00Z'
 phase_transitions:
 - phase: preplan
   timestamp: '2026-05-14T12:48:57Z'
