@@ -1,0 +1,9 @@
+kind: service
+id: hermes-agent
+name: agent
+domain: hermes
+service: agent
+status: active
+owner: ''
+created: '2026-05-14T15:27:35Z'
+updated: '2026-05-14T15:27:35Z'
