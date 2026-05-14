@@ -826,3 +826,20 @@ features:
   created: '2026-05-13T11:47:24Z'
   updated_at: '2026-05-13T11:47:24Z'
   summary: ''
+- featureId: terminus-inference-hermes-by-nous-research-install
+  id: terminus-inference-hermes-by-nous-research-install
+  name: Hermes by Nous Research Install
+  featureSlug: hermes-by-nous-research-install
+  domain: terminus
+  service: inference
+  status: preplan
+  track: full
+  owner: Todd Hintzmann
+  plan_branch: terminus-inference-hermes-by-nous-research-install-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-14T12:48:57Z'
+  updated_at: '2026-05-14T12:48:57Z'
+  summary: ''
