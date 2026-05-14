@@ -2,8 +2,8 @@ name: Hermes by Nous Research Install
 description: ''
 featureId: terminus-inference-hermes-by-nous-research-install
 featureSlug: hermes-by-nous-research-install
-domain: terminus
-service: inference
+domain: hermes
+service: agent
 phase: businessplan-complete
 track: full
 milestones:
@@ -18,7 +18,9 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- path: TargetProjects/terminus/infra/terminus.infra
+  label: terminus.infra
 links:
   retrospective: null
   issues: []
@@ -37,5 +39,5 @@ phase_transitions:
   review_artifact: businessplan-adversarial-review.md
   governance_sha: 5ca02c9
 docs:
-  path: docs/terminus/inference/terminus-inference-hermes-by-nous-research-install
-  governance_docs_path: features/terminus/inference/terminus-inference-hermes-by-nous-research-install/docs
+  path: docs/hermes/agent/hermes-agent-install
+  governance_docs_path: features/hermes/agent/hermes-agent-install/docs
