@@ -832,7 +832,7 @@ features:
   featureSlug: hermes-by-nous-research-install
   domain: terminus
   service: inference
-  status: preplan
+  status: preplan-complete
   track: full
   owner: Todd Hintzmann
   plan_branch: terminus-inference-hermes-by-nous-research-install-plan
@@ -843,3 +843,4 @@ features:
   created: '2026-05-14T12:48:57Z'
   updated_at: '2026-05-14T12:48:57Z'
   summary: ''
+  phase: preplan-complete
