@@ -17,15 +17,15 @@ open_questions:
   - "Does qwen3:27b template include function calling? Needs verification via 'ollama show qwen3:27b'"
   - "Should Hermes be installed from the upstream install script or cloned from a pinned commit?"
   - "What is the exact Hermes config key for Postgres memory backend? (needs verification against Hermes docs)"
-  - "What Postgres hostname/port is used within trantor.internal? (postgres.trantor.internal:5432 assumed)"
+  - "What Postgres hostname/port is used within trantor.internal? RESOLVED: 10.0.0.56:5432 (Patroni VIP, external to k3s — confirmed from live Kaylee DATABASE_URL and architecture.md)."
 depends_on: []
 blocks: []
 stepsCompleted: [step-01-init, step-02-discovery, step-02b-vision, step-02c-executive-summary, step-03-success, step-04-journeys, step-05-domain, step-06-innovation, step-07-project-type, step-08-scoping, step-09-functional, step-10-nonfunctional, step-11-polish, step-12-complete]
 inputDocuments:
-  - docs/terminus/inference/terminus-inference-hermes-by-nous-research-install/product-brief.md
-  - docs/terminus/inference/terminus-inference-hermes-by-nous-research-install/research.md
-  - docs/terminus/inference/terminus-inference-hermes-by-nous-research-install/brainstorm.md
-  - docs/terminus/inference/terminus-inference-hermes-by-nous-research-install/preplan-adversarial-review.md
+  - docs/hermes/agent/hermes-agent-install/product-brief.md
+  - docs/hermes/agent/hermes-agent-install/research.md
+  - docs/hermes/agent/hermes-agent-install/brainstorm.md
+  - docs/hermes/agent/hermes-agent-install/preplan-adversarial-review.md
 workflowType: prd
 updated_at: "2026-05-14T00:00:00Z"
 ---
@@ -257,7 +257,7 @@ This feature installs **Hermes Agent** (MIT-licensed autonomous agent app by Nou
 | FR-8.1 | A database named `hermes_memory` must be provisioned on the existing Postgres server within `trantor.internal` |
 | FR-8.2 | A Postgres user `hermes` must be created with permissions scoped exclusively to the `hermes_memory` database (no superuser, no cross-database access) |
 | FR-8.3 | The Hermes memory backend must be configured to connect to the Postgres instance via a connection string stored in `~/.hermes/.env` (not in `config.yaml` plaintext) |
-| FR-8.4 | The Postgres connection string format must be: `postgresql://hermes:PASSWORD@postgres.trantor.internal:5432/hermes_memory` (hostname TBD — to be confirmed against existing cluster config) |
+| FR-8.4 | The Postgres connection string format must be: `postgresql://hermes:PASSWORD@10.0.0.56:5432/hermes_memory` (Patroni VIP confirmed — external to k3s, same as all other terminus services) |
 | FR-8.5 | Hermes memory must persist across process restarts: a fact recorded in one session must be recallable in a subsequent session |
 | FR-8.6 | The Postgres provisioning procedure (database creation, user creation, grant statements) must be documented in the runbook as repeatable SQL commands |
 | FR-8.7 | The `hermes` Postgres user password must be stored in the Ansible vault or equivalent secrets store; it must not appear in plaintext in any committed file |
