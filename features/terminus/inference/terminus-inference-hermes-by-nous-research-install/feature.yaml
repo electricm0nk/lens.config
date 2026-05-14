@@ -4,7 +4,7 @@ featureId: terminus-inference-hermes-by-nous-research-install
 featureSlug: hermes-by-nous-research-install
 domain: terminus
 service: inference
-phase: preplan
+phase: preplan-complete
 track: full
 milestones:
   businessplan: null
