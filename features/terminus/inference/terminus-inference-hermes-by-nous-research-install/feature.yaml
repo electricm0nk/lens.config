@@ -4,10 +4,10 @@ featureId: terminus-inference-hermes-by-nous-research-install
 featureSlug: hermes-by-nous-research-install
 domain: terminus
 service: inference
-phase: preplan-complete
+phase: businessplan-complete
 track: full
 milestones:
-  businessplan: null
+  businessplan: '2026-05-14T00:00:00Z'
   techplan: null
   finalizeplan: null
   dev-ready: null
@@ -25,11 +25,17 @@ links:
   pull_request: null
 priority: medium
 created: '2026-05-14T12:48:57Z'
-updated: '2026-05-14T12:48:57Z'
+updated: '2026-05-14T00:00:00Z'
 phase_transitions:
 - phase: preplan
   timestamp: '2026-05-14T12:48:57Z'
   user: Todd Hintzmann
+- phase: businessplan-complete
+  timestamp: '2026-05-14T00:00:00Z'
+  user: Todd Hintzmann
+  verdict: pass-with-warnings
+  review_artifact: businessplan-adversarial-review.md
+  governance_sha: 5ca02c9
 docs:
   path: docs/terminus/inference/terminus-inference-hermes-by-nous-research-install
   governance_docs_path: features/terminus/inference/terminus-inference-hermes-by-nous-research-install/docs
