@@ -33,6 +33,7 @@ repositories:
 - name: terminus-inference-gateway
   remote_url: https://github.com/electricm0nk/terminus-inference-gateway.git
   local_path: TargetProjects/terminus/inference/terminus-inference-gateway
+  feature_base_branch: develop
 - name: terminus-inference-qwen-warmup
   remote_url: https://github.com/electricm0nk/terminus-inference-qwen-warmup.git
   local_path: TargetProjects/terminus/inference/terminus-inference-qwen-warmup
