@@ -4,14 +4,14 @@ featureId: terminus-watchdog-llm-engine
 featureSlug: llm-engine
 domain: terminus
 service: watchdog
-phase: finalizeplan-complete
+phase: dev-complete
 track: full
 milestones:
   businessplan: '2026-05-13'
   techplan: '2026-05-14'
   finalizeplan: null
-  dev-ready: null
-  dev-complete: null
+  dev-ready: '2026-05-14'
+  dev-complete: '2026-05-19'
 team:
 - username: Todd Hintzmann
   role: lead
