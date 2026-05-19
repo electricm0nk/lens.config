@@ -4,7 +4,7 @@ featureId: terminus-watchdog-llm-engine
 featureSlug: llm-engine
 domain: terminus
 service: watchdog
-phase: dev-complete
+phase: complete
 track: full
 milestones:
   businessplan: '2026-05-13'
@@ -54,6 +54,10 @@ phase_transitions:
 - phase: techplan-complete
   timestamp: '2026-05-14T00:00:00Z'
   user: Todd Hintzmann
+- phase: complete
+  timestamp: '2026-05-19T22:41:38.180350+00:00'
+  user: lens-complete
 docs:
   path: docs/terminus/watchdog/terminus-watchdog-llm-engine
   governance_docs_path: features/terminus/watchdog/terminus-watchdog-llm-engine/docs
+completed_at: '2026-05-19T22:41:38.180350+00:00'

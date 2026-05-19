@@ -1,11 +1,17 @@
 ---
-featureId: terminus-watchdog-llm-engine
-name: Watchdog LLM Engine
-status: preplan
-track: full
-updated_at: 2026-05-13T11:47:24Z
+feature: terminus-watchdog-llm-engine
+doc_type: summary
+status: archived
+archived_at: 2026-05-19T22:41:38.180350+00:00
 ---
 
 # Watchdog LLM Engine
 
-<!-- Auto-generated summary stub. Update when planning begins. -->
+**Domain:** terminus  
+**Service:** watchdog  
+**Track:** full  
+**Archived:** 2026-05-19T22:41:38.180350+00:00
+
+## Archive Notes
+
+Feature archived via `lens-complete`. See `feature.yaml` for full lifecycle history.
