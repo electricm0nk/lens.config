@@ -815,7 +815,7 @@ features:
   featureSlug: llm-engine
   domain: terminus
   service: watchdog
-  status: preplan
+  status: finalizeplan-complete
   track: full
   owner: Todd Hintzmann
   plan_branch: terminus-watchdog-llm-engine-plan
@@ -826,6 +826,7 @@ features:
   created: '2026-05-13T11:47:24Z'
   updated_at: '2026-05-13T11:47:24Z'
   summary: ''
+  phase: finalizeplan-complete
 - featureId: terminus-inference-hermes-by-nous-research-install
   id: terminus-inference-hermes-by-nous-research-install
   name: Hermes by Nous Research Install

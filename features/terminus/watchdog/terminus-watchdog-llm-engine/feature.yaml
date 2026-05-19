@@ -4,7 +4,7 @@ featureId: terminus-watchdog-llm-engine
 featureSlug: llm-engine
 domain: terminus
 service: watchdog
-phase: techplan-complete
+phase: finalizeplan-complete
 track: full
 milestones:
   businessplan: '2026-05-13'
@@ -19,15 +19,15 @@ dependencies:
   depends_on: []
   depended_by: []
 target_repos:
-  - repo: terminus.hermes
-    org: electricm0nk
-    url: https://github.com/electricm0nk/terminus.hermes
-    role: primary
-    path: TargetProjects/terminus/terminus.hermes
-  - repo: terminus.infra
-    org: electricm0nk
-    role: infra
-    path: TargetProjects/terminus/infra
+- repo: terminus.hermes
+  org: electricm0nk
+  url: https://github.com/electricm0nk/terminus.hermes
+  role: primary
+  path: TargetProjects/terminus/terminus.hermes
+- repo: terminus.infra
+  org: electricm0nk
+  role: infra
+  path: TargetProjects/terminus/infra
 links:
   retrospective: null
   issues: []
