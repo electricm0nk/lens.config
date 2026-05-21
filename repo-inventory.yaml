@@ -61,6 +61,8 @@ repositories:
   dev_branch_mode: feature-id
   feature_base_branch: main
   language: python
-  domain: terminus
-  service: watchdog
   discovered_at: '2026-05-18T00:00:00Z'
+- name: terminus.watchdog
+  remote_url: https://github.com/electricm0nk/terminus.watchdog.git
+  local_path: TargetProjects/terminus/watchdog/terminus.watchdog
+  feature_base_branch: ''
