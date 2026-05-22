@@ -4,7 +4,7 @@ featureId: hermes-platform-honcho-setup
 featureSlug: honcho-setup
 domain: hermes
 service: platform
-phase: expressplan
+phase: expressplan-complete
 track: express
 milestones:
   businessplan: null
