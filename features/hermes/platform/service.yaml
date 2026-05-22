@@ -1,0 +1,9 @@
+kind: service
+id: hermes-platform
+name: Platform
+domain: hermes
+service: platform
+status: active
+owner: Todd Hintzmann
+created: '2026-05-22T14:32:10Z'
+updated: '2026-05-22T14:32:10Z'
