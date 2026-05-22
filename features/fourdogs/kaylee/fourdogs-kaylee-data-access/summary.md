@@ -1,11 +1,17 @@
 ---
-featureId: fourdogs-kaylee-data-access
-name: Kaylee Data Access
-status: expressplan
-track: express
-updated_at: 2026-05-21T11:27:48Z
+feature: fourdogs-kaylee-data-access
+doc_type: summary
+status: archived
+archived_at: 2026-05-22T12:02:02.743027+00:00
 ---
 
 # Kaylee Data Access
 
-<!-- Auto-generated summary stub. Update when planning begins. -->
+**Domain:** fourdogs  
+**Service:** kaylee  
+**Track:** express  
+**Archived:** 2026-05-22T12:02:02.743027+00:00
+
+## Archive Notes
+
+Feature archived via `lens-complete`. See `feature.yaml` for full lifecycle history.

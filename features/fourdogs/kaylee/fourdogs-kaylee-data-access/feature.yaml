@@ -4,7 +4,7 @@ featureId: fourdogs-kaylee-data-access
 featureSlug: data-access
 domain: fourdogs
 service: kaylee
-phase: dev-complete
+phase: complete
 track: express
 milestones:
   businessplan: null
@@ -32,6 +32,10 @@ phase_transitions:
 - phase: expressplan
   timestamp: '2026-05-21T11:27:48Z'
   user: Todd Hintzmann
+- phase: complete
+  timestamp: '2026-05-22T12:02:02.743027+00:00'
+  user: lens-complete
 docs:
   path: docs/fourdogs/kaylee/fourdogs-kaylee-data-access
   governance_docs_path: features/fourdogs/kaylee/fourdogs-kaylee-data-access/docs
+completed_at: '2026-05-22T12:02:02.743027+00:00'
