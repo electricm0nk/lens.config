@@ -4,12 +4,12 @@ featureId: fourdogs-kaylee-data-access
 featureSlug: data-access
 domain: fourdogs
 service: kaylee
-phase: expressplan-complete
+phase: finalizeplan-complete
 track: express
 milestones:
   businessplan: null
   techplan: null
-  finalizeplan: null
+  finalizeplan: '2026-05-21'
   dev-ready: null
   dev-complete: null
 team:
@@ -18,11 +18,13 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- repo: kaylee-agent
+  path: TargetProjects/fourdogs/kaylee-agent
 links:
   retrospective: null
   issues: []
-  pull_request: null
+  pull_request: https://github.com/electricm0nk/bmad.lens.projects/pull/207
 priority: medium
 created: '2026-05-21T11:27:48Z'
 updated: '2026-05-21T11:27:48Z'
