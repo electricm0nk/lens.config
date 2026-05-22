@@ -863,3 +863,20 @@ features:
   updated_at: '2026-05-22T12:02:02.743027+00:00'
   summary: ''
   phase: expressplan-complete
+- featureId: hermes-platform-honcho-setup
+  id: hermes-platform-honcho-setup
+  name: Honcho Setup
+  featureSlug: honcho-setup
+  domain: hermes
+  service: platform
+  status: expressplan
+  track: express
+  owner: Todd Hintzmann
+  plan_branch: hermes-platform-honcho-setup-plan
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-22T14:32:35Z'
+  updated_at: '2026-05-22T14:32:35Z'
+  summary: ''
