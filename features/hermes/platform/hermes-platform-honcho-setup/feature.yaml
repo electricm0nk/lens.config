@@ -18,7 +18,11 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- repo: terminus.infra
+  url: https://github.com/electricm0nk/terminus.infra.git
+  local_path: TargetProjects/terminus/infra/terminus.infra
+  purpose: Ansible playbook, systemd unit templates, smoke test scripts, Alloy config
 links:
   retrospective: null
   issues: []
