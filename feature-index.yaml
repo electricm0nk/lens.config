@@ -869,7 +869,7 @@ features:
   featureSlug: honcho-setup
   domain: hermes
   service: platform
-  status: expressplan
+  status: expressplan-complete
   track: express
   owner: Todd Hintzmann
   plan_branch: hermes-platform-honcho-setup-plan
@@ -880,3 +880,4 @@ features:
   created: '2026-05-22T14:32:35Z'
   updated_at: '2026-05-22T14:32:35Z'
   summary: ''
+  phase: expressplan-complete
