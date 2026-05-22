@@ -4,14 +4,14 @@ featureId: fourdogs-kaylee-data-access
 featureSlug: data-access
 domain: fourdogs
 service: kaylee
-phase: finalizeplan-complete
+phase: dev-complete
 track: express
 milestones:
   businessplan: null
   techplan: null
   finalizeplan: '2026-05-21'
   dev-ready: null
-  dev-complete: null
+  dev-complete: '2026-05-22'
 team:
 - username: Todd Hintzmann
   role: lead
