@@ -4,7 +4,7 @@ featureId: hermes-platform-honcho-setup
 featureSlug: honcho-setup
 domain: hermes
 service: platform
-phase: dev-complete
+phase: complete
 track: express
 milestones:
   businessplan: null
@@ -34,6 +34,10 @@ phase_transitions:
 - phase: expressplan
   timestamp: '2026-05-22T14:32:35Z'
   user: Todd Hintzmann
+- phase: complete
+  timestamp: '2026-05-23T21:50:03.210471+00:00'
+  user: lens-complete
 docs:
   path: docs/hermes/platform/hermes-platform-honcho-setup
   governance_docs_path: features/hermes/platform/hermes-platform-honcho-setup/docs
+completed_at: '2026-05-23T21:50:03.210471+00:00'
