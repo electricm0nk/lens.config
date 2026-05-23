@@ -887,7 +887,7 @@ features:
   featureSlug: qwen-mtp-adapter-switch
   domain: terminus
   service: inference
-  status: expressplan-complete
+  status: finalizeplan-complete
   track: express
   owner: ''
   plan_branch: main
@@ -898,4 +898,4 @@ features:
   created: '2026-05-23T22:40:47Z'
   updated_at: '2026-05-23T22:40:47Z'
   summary: ''
-  phase: expressplan-complete
+  phase: finalizeplan-complete
