@@ -26,7 +26,7 @@ target_repos:
 links:
   retrospective: null
   issues: []
-  pull_request: null
+  pull_request: https://github.com/electricm0nk/terminus.infra/pull/128
 priority: medium
 created: '2026-05-22T14:32:35Z'
 updated: '2026-05-22T14:32:35Z'
