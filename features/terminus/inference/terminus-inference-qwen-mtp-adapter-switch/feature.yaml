@@ -19,7 +19,10 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- terminus-inference-gateway
+- terminus.infra
+- terminus-inference-qwen-warmup
 links:
   retrospective: null
   issues: []
