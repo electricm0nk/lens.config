@@ -881,3 +881,20 @@ features:
   updated_at: '2026-05-23T21:50:03.210471+00:00'
   summary: ''
   phase: expressplan-complete
+- featureId: terminus-inference-qwen-mtp-adapter-switch
+  id: terminus-inference-qwen-mtp-adapter-switch
+  name: qwen-mtp-adapter-switch
+  featureSlug: qwen-mtp-adapter-switch
+  domain: terminus
+  service: inference
+  status: expressplan
+  track: express
+  owner: ''
+  plan_branch: main
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-23T22:40:47Z'
+  updated_at: '2026-05-23T22:40:47Z'
+  summary: ''
