@@ -1,0 +1,73 @@
+feature: terminus-inference-omniroute-gateway-migration
+generated: "2026-05-25"
+track: express
+current_sprint: 1
+
+sprints:
+  - id: 1
+    theme: Deploy + Wire
+    status: not-started
+    stories:
+      - id: OMNI-1.1
+        title: OmniRoute K8s Deployment
+        status: not-started
+        target_repo: TargetProjects/terminus/infra/terminus.infra
+      - id: OMNI-S1.0
+        title: "Spike: Auth Bridge Implementation Path"
+        status: not-started
+        type: spike
+        target_repo: docs only
+      - id: OMNI-1.2
+        title: llamacpp Provider Registration
+        status: not-started
+        target_repo: TargetProjects/terminus/infra/terminus.infra
+      - id: OMNI-1.3
+        title: Route Profile Combos (All 5)
+        status: not-started
+        target_repo: TargetProjects/terminus/infra/terminus.infra
+      - id: OMNI-C1
+        title: "Chore: Article 16 .todo Approval"
+        status: not-started
+        type: chore
+        gate: blocking — Sprint 2 may not begin until complete
+        target_repo: docs only
+      - id: OMNI-C2
+        title: "Chore: OmniRoute Version Pin Automation"
+        status: not-started
+        type: chore
+        target_repo: TargetProjects/terminus/infra/terminus.infra
+
+  - id: 2
+    theme: Auth + Harden
+    status: not-started
+    gate: Spike S-1.0 and Chore C-1 must be complete before Sprint 2 begins
+    stories:
+      - id: OMNI-2.1
+        title: Vault JWT Auth Bridge
+        status: not-started
+        target_repo: TargetProjects/terminus/infra/terminus.infra
+      - id: OMNI-2.2
+        title: Contract Test Suite Port to OmniRoute
+        status: not-started
+        target_repo: TargetProjects/terminus/inference/terminus-inference-gateway
+      - id: OMNI-2.3
+        title: Circuit Breaker + Batch Hard-Fail Validation
+        status: not-started
+        target_repo: TargetProjects/terminus/infra/terminus.infra
+
+  - id: 3
+    theme: Cutover + Decommission
+    status: not-started
+    stories:
+      - id: OMNI-3.1
+        title: "Architecture Documentation — Full Finalization"
+        status: not-started
+        target_repo: docs only
+      - id: OMNI-3.2
+        title: Ingress Cutover + Parallel Window
+        status: not-started
+        target_repo: TargetProjects/terminus/infra/terminus.infra
+      - id: OMNI-3.3
+        title: Decommission terminus-inference-gateway
+        status: not-started
+        target_repo: TargetProjects/terminus/infra/terminus.infra

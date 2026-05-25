@@ -905,7 +905,7 @@ features:
   featureSlug: omniroute-gateway-migration
   domain: terminus
   service: inference
-  status: expressplan
+  status: finalizeplan-complete
   track: express
   owner: Todd Hintzmann
   plan_branch: main
@@ -916,3 +916,4 @@ features:
   created: '2026-05-25T20:01:32Z'
   updated_at: '2026-05-25T20:01:32Z'
   summary: ''
+  phase: finalizeplan-complete
