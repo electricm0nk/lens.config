@@ -4,7 +4,7 @@ featureId: terminus-inference-omniroute-gateway-migration
 featureSlug: omniroute-gateway-migration
 domain: terminus
 service: inference
-phase: finalizeplan-complete
+phase: dev
 track: express
 milestones:
   businessplan: null
