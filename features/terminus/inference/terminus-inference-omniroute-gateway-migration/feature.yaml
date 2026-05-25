@@ -4,7 +4,7 @@ featureId: terminus-inference-omniroute-gateway-migration
 featureSlug: omniroute-gateway-migration
 domain: terminus
 service: inference
-phase: expressplan
+phase: expressplan-complete
 track: express
 milestones:
   businessplan: null
@@ -25,10 +25,13 @@ links:
   pull_request: null
 priority: medium
 created: '2026-05-25T20:01:32Z'
-updated: '2026-05-25T20:01:32Z'
+updated: '2026-05-25T21:00:00Z'
 phase_transitions:
 - phase: expressplan
   timestamp: '2026-05-25T20:01:32Z'
+  user: Todd Hintzmann
+- phase: expressplan-complete
+  timestamp: '2026-05-25T21:00:00Z'
   user: Todd Hintzmann
 docs:
   path: docs/terminus/inference/terminus-inference-omniroute-gateway-migration
