@@ -1,0 +1,35 @@
+name: OmniRoute Gateway Migration
+description: ''
+featureId: terminus-inference-omniroute-gateway-migration
+featureSlug: omniroute-gateway-migration
+domain: terminus
+service: inference
+phase: expressplan
+track: express
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-05-25T20:01:32Z'
+updated: '2026-05-25T20:01:32Z'
+phase_transitions:
+- phase: expressplan
+  timestamp: '2026-05-25T20:01:32Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/terminus/inference/terminus-inference-omniroute-gateway-migration
+  governance_docs_path: features/terminus/inference/terminus-inference-omniroute-gateway-migration/docs

@@ -899,3 +899,20 @@ features:
   updated_at: '2026-05-23T22:40:47Z'
   summary: ''
   phase: finalizeplan-complete
+- featureId: terminus-inference-omniroute-gateway-migration
+  id: terminus-inference-omniroute-gateway-migration
+  name: OmniRoute Gateway Migration
+  featureSlug: omniroute-gateway-migration
+  domain: terminus
+  service: inference
+  status: expressplan
+  track: express
+  owner: Todd Hintzmann
+  plan_branch: main
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-25T20:01:32Z'
+  updated_at: '2026-05-25T20:01:32Z'
+  summary: ''
