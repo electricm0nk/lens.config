@@ -4,7 +4,7 @@ featureId: terminus-inference-omniroute-upgrade-to-3-8-3
 featureSlug: omniroute-upgrade-to-3-8-3
 domain: terminus
 service: inference
-phase: finalizeplan-complete
+phase: dev-complete
 track: quickdev
 milestones:
   businessplan: null
