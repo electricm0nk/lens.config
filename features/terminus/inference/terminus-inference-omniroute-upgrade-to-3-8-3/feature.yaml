@@ -1,0 +1,35 @@
+name: OmniRoute Upgrade to 3.8.3
+description: ''
+featureId: terminus-inference-omniroute-upgrade-to-3-8-3
+featureSlug: omniroute-upgrade-to-3-8-3
+domain: terminus
+service: inference
+phase: finalizeplan
+track: quickdev
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-05-26T15:11:47Z'
+updated: '2026-05-26T15:11:47Z'
+phase_transitions:
+- phase: finalizeplan
+  timestamp: '2026-05-26T15:11:47Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/terminus/inference/terminus-inference-omniroute-upgrade-to-3-8-3
+  governance_docs_path: features/terminus/inference/terminus-inference-omniroute-upgrade-to-3-8-3/docs

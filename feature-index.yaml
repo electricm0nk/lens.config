@@ -917,3 +917,20 @@ features:
   updated_at: '2026-05-25T20:01:32Z'
   summary: ''
   phase: dev
+- featureId: terminus-inference-omniroute-upgrade-to-3-8-3
+  id: terminus-inference-omniroute-upgrade-to-3-8-3
+  name: OmniRoute Upgrade to 3.8.3
+  featureSlug: omniroute-upgrade-to-3-8-3
+  domain: terminus
+  service: inference
+  status: finalizeplan
+  track: quickdev
+  owner: Todd Hintzmann
+  plan_branch: main
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-26T15:11:47Z'
+  updated_at: '2026-05-26T15:11:47Z'
+  summary: ''
