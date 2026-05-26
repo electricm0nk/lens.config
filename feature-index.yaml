@@ -923,7 +923,7 @@ features:
   featureSlug: omniroute-upgrade-to-3-8-3
   domain: terminus
   service: inference
-  status: finalizeplan
+  status: finalizeplan-complete
   track: quickdev
   owner: Todd Hintzmann
   plan_branch: main
@@ -934,3 +934,4 @@ features:
   created: '2026-05-26T15:11:47Z'
   updated_at: '2026-05-26T15:11:47Z'
   summary: ''
+  phase: finalizeplan-complete
