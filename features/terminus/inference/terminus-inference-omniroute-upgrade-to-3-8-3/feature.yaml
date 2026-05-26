@@ -4,7 +4,7 @@ featureId: terminus-inference-omniroute-upgrade-to-3-8-3
 featureSlug: omniroute-upgrade-to-3-8-3
 domain: terminus
 service: inference
-phase: finalizeplan
+phase: finalizeplan-complete
 track: quickdev
 milestones:
   businessplan: null
@@ -18,7 +18,9 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- name: terminus.infra
+  local_path: TargetProjects/terminus/infra/terminus.infra
 links:
   retrospective: null
   issues: []
