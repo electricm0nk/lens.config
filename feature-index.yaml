@@ -959,7 +959,7 @@ features:
   featureSlug: kaylee-hermes-agent-integration
   domain: fourdogs
   service: kaylee
-  status: preplan
+  status: preplan-complete
   track: full
   owner: Todd Hintzmann
   plan_branch: main
@@ -970,3 +970,4 @@ features:
   created: '2026-05-30T21:06:16Z'
   updated_at: '2026-05-30T21:06:16Z'
   summary: ''
+  phase: preplan-complete
