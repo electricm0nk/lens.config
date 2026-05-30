@@ -4,7 +4,7 @@ featureId: trantor-home-assistant-ha-vm-deploy
 featureSlug: ha-vm-deploy
 domain: trantor
 service: home-assistant
-phase: expressplan-complete
+phase: finalizeplan-complete
 track: express
 milestones:
   businessplan: null
@@ -18,7 +18,11 @@ team:
 dependencies:
   depends_on: []
   depended_by: []
-target_repos: []
+target_repos:
+- name: terminus.infra
+  remote_url: https://github.com/electricm0nk/terminus.infra.git
+  local_path: TargetProjects/terminus/infra/terminus.infra
+  write_scope: trantor/home-assistant/
 links:
   retrospective: null
   issues: []

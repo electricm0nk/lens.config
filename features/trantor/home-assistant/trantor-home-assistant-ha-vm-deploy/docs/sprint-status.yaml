@@ -1,0 +1,91 @@
+feature: trantor-home-assistant-ha-vm-deploy
+track: express
+sprint: "1"
+sprint_goal: >
+  Deploy Home Assistant OS on a Proxmox VM such that ha.trantor.internal is accessible
+  on the local network. All infrastructure committed to git and reproducible from runbook.
+status: planning
+updated_at: "2026-05-30T00:00:00Z"
+
+stories:
+  - story_id: HA-1
+    epic: "Epic 1: HAOS VM Provisioning"
+    title: Scaffold OpenTofu module for HAOS VM
+    status: not-started
+    depends_on: []
+    target_repo: terminus.infra
+    write_scope: trantor/home-assistant/
+    points: 2
+
+  - story_id: HA-2
+    epic: "Epic 1: HAOS VM Provisioning"
+    title: Provision HAOS VM via OpenTofu
+    status: not-started
+    depends_on:
+      - HA-1
+    target_repo: terminus.infra
+    write_scope: trantor/home-assistant/
+    points: 3
+
+  - story_id: HA-3
+    epic: "Epic 2: Network Access and DNS"
+    title: Configure DNS — ha.trantor.internal
+    status: not-started
+    depends_on:
+      - HA-2
+    target_repo: terminus.infra
+    write_scope: trantor/home-assistant/
+    notes: Synology NAS DNS admin UI — A record ha.trantor.internal → 10.0.0.250
+    points: 1
+
+  - story_id: HA-4
+    epic: "Epic 3: Secrets and Remote Access"
+    title: Seed Vault secret — Tailscale auth key
+    status: not-started
+    depends_on: []
+    target_repo: terminus.infra
+    write_scope: trantor/home-assistant/
+    notes: Verify Vault policy covers secret/trantor/* before writing
+    points: 1
+
+  - story_id: HA-5
+    epic: "Epic 3: Secrets and Remote Access"
+    title: Configure Tailscale add-on in HA
+    status: not-started
+    depends_on:
+      - HA-2
+      - HA-4
+    target_repo: terminus.infra
+    write_scope: trantor/home-assistant/
+    notes: Best-effort — sprint DoD passes without Tailscale if local access confirmed
+    points: 2
+
+  - story_id: HA-6
+    epic: "Epic 4: Runbook and Sign-off"
+    title: Write runbook.md — HAOS VM rebuild-from-scratch
+    status: not-started
+    depends_on:
+      - HA-2
+      - HA-3
+      - HA-4
+      - HA-5
+    target_repo: terminus.infra
+    write_scope: trantor/home-assistant/
+    notes: Article 11 requirement; include key rotation and DNS steps
+    points: 2
+
+  - story_id: HA-7
+    epic: "Epic 4: Runbook and Sign-off"
+    title: DoD validation and sign-off
+    status: not-started
+    depends_on:
+      - HA-6
+    target_repo: terminus.infra
+    write_scope: trantor/home-assistant/
+    points: 1
+
+totals:
+  stories: 7
+  points: 12
+  stories_complete: 0
+  points_complete: 0
