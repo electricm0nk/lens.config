@@ -935,3 +935,20 @@ features:
   updated_at: '2026-05-26T15:11:47Z'
   summary: ''
   phase: finalizeplan-complete
+- featureId: trantor-home-assistant-ha-vm-deploy
+  id: trantor-home-assistant-ha-vm-deploy
+  name: Home Assistant VM Deployment
+  featureSlug: ha-vm-deploy
+  domain: trantor
+  service: home-assistant
+  status: expressplan
+  track: express
+  owner: Todd Hintzmann
+  plan_branch: main
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-05-30T17:40:13Z'
+  updated_at: '2026-05-30T17:40:13Z'
+  summary: ''

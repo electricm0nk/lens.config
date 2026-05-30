@@ -1,0 +1,35 @@
+name: Home Assistant VM Deployment
+description: ''
+featureId: trantor-home-assistant-ha-vm-deploy
+featureSlug: ha-vm-deploy
+domain: trantor
+service: home-assistant
+phase: expressplan
+track: express
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-05-30T17:40:13Z'
+updated: '2026-05-30T17:40:13Z'
+phase_transitions:
+- phase: expressplan
+  timestamp: '2026-05-30T17:40:13Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/trantor/home-assistant/trantor-home-assistant-ha-vm-deploy
+  governance_docs_path: features/trantor/home-assistant/trantor-home-assistant-ha-vm-deploy/docs
