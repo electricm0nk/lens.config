@@ -1,0 +1,9 @@
+kind: service
+id: trantor-home-assistant
+name: home-assistant
+domain: trantor
+service: home-assistant
+status: active
+owner: ''
+created: '2026-05-30T17:39:55Z'
+updated: '2026-05-30T17:39:55Z'
