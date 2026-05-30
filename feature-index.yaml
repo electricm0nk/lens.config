@@ -941,7 +941,7 @@ features:
   featureSlug: ha-vm-deploy
   domain: trantor
   service: home-assistant
-  status: expressplan
+  status: expressplan-complete
   track: express
   owner: Todd Hintzmann
   plan_branch: main
@@ -952,3 +952,4 @@ features:
   created: '2026-05-30T17:40:13Z'
   updated_at: '2026-05-30T17:40:13Z'
   summary: ''
+  phase: expressplan-complete

@@ -4,7 +4,7 @@ featureId: trantor-home-assistant-ha-vm-deploy
 featureSlug: ha-vm-deploy
 domain: trantor
 service: home-assistant
-phase: expressplan
+phase: expressplan-complete
 track: express
 milestones:
   businessplan: null
