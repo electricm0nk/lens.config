@@ -1,0 +1,35 @@
+name: Kaylee Hermes Agent Integration
+description: ''
+featureId: fourdogs-kaylee-kaylee-hermes-agent-integration
+featureSlug: kaylee-hermes-agent-integration
+domain: fourdogs
+service: kaylee
+phase: preplan
+track: full
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-05-30T21:06:16Z'
+updated: '2026-05-30T21:06:16Z'
+phase_transitions:
+- phase: preplan
+  timestamp: '2026-05-30T21:06:16Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/fourdogs/kaylee/fourdogs-kaylee-kaylee-hermes-agent-integration
+  governance_docs_path: features/fourdogs/kaylee/fourdogs-kaylee-kaylee-hermes-agent-integration/docs
