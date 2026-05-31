@@ -4,7 +4,7 @@ featureId: fourdogs-kaylee-kaylee-hermes-agent-integration
 featureSlug: kaylee-hermes-agent-integration
 domain: fourdogs
 service: kaylee
-phase: businessplan-complete
+phase: techplan-complete
 track: full
 milestones:
   businessplan: null
