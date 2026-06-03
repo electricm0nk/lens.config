@@ -971,3 +971,20 @@ features:
   updated_at: '2026-05-30T21:06:16Z'
   summary: ''
   phase: techplan-complete
+- featureId: terminus-infra-restic-backups
+  id: terminus-infra-restic-backups
+  name: Restic Backups
+  featureSlug: restic-backups
+  domain: terminus
+  service: infra
+  status: expressplan
+  track: express
+  owner: Todd Hintzmann
+  plan_branch: main
+  related_features:
+    depends_on: []
+    blocks: []
+    related: []
+  created: '2026-06-03T20:59:49Z'
+  updated_at: '2026-06-03T20:59:49Z'
+  summary: ''

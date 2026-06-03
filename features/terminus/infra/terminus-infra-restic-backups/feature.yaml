@@ -1,0 +1,35 @@
+name: Restic Backups
+description: ''
+featureId: terminus-infra-restic-backups
+featureSlug: restic-backups
+domain: terminus
+service: infra
+phase: expressplan
+track: express
+milestones:
+  businessplan: null
+  techplan: null
+  finalizeplan: null
+  dev-ready: null
+  dev-complete: null
+team:
+- username: Todd Hintzmann
+  role: lead
+dependencies:
+  depends_on: []
+  depended_by: []
+target_repos: []
+links:
+  retrospective: null
+  issues: []
+  pull_request: null
+priority: medium
+created: '2026-06-03T20:59:49Z'
+updated: '2026-06-03T20:59:49Z'
+phase_transitions:
+- phase: expressplan
+  timestamp: '2026-06-03T20:59:49Z'
+  user: Todd Hintzmann
+docs:
+  path: docs/terminus/infra/terminus-infra-restic-backups
+  governance_docs_path: features/terminus/infra/terminus-infra-restic-backups/docs
