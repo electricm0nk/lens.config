@@ -4,7 +4,7 @@ featureId: terminus-infra-restic-backups
 featureSlug: restic-backups
 domain: terminus
 service: infra
-phase: expressplan
+phase: expressplan-complete
 track: express
 milestones:
   businessplan: null
