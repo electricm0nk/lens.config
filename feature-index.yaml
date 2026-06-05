@@ -977,7 +977,7 @@ features:
   featureSlug: restic-backups
   domain: terminus
   service: infra
-  status: expressplan-complete
+  status: finalizeplan-complete
   track: express
   owner: Todd Hintzmann
   plan_branch: main
@@ -988,4 +988,4 @@ features:
   created: '2026-06-03T20:59:49Z'
   updated_at: '2026-06-03T20:59:49Z'
   summary: ''
-  phase: expressplan-complete
+  phase: finalizeplan-complete
